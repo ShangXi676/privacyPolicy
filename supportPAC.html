@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 — 青迹</title>
+    <style>
+        :root { --bg: #f8f9fa; --card: #fff; --text: #333; --heading: #1a1a1a; --link: #06B6D4; --shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
+        h2 { font-size: 18px; margin-top: 0; color: #444; }
+        a { color: var(--link); }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
+        .btn { display: inline-block; background: var(--link); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--text); }
+        .lang-bar button.active { background: var(--link); color: #fff; border-color: var(--link); }
+        [data-lang] { display: none; }
+        [data-lang].show { display: revert; }
+        .card[data-lang].show { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="lang-bar">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en">English</button>
+    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+    <button onclick="switchLang('de')" id="btn-de">Deutsch</button>
+    <button onclick="switchLang('ko')" id="btn-ko">한국어</button>
+    <button onclick="switchLang('es')" id="btn-es">Español</button>
+    <button onclick="switchLang('fr')" id="btn-fr">Français</button>
+    <button onclick="switchLang('it')" id="btn-it">Italiano</button>
+    <button onclick="switchLang('pt')" id="btn-pt">Português</button>
+    <button onclick="switchLang('ru')" id="btn-ru">Русский</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
+</div>
+
+<!-- zh-Hans -->
+<h1 data-lang="zh-Hans">青迹 · 技术支持</h1>
+<p data-lang="zh-Hans">感谢使用青迹·相册清理！如有问题或建议，欢迎反馈。</p>
+<div class="card" data-lang="zh-Hans">
+    <h2>邮件反馈</h2>
+    <p>发送邮件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我们会尽快回复。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">发送邮件</a>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>删除的照片可以恢复吗？</h2>
+    <p>可以。删除操作通过系统相册完成，照片会先进入「最近删除」，可在系统相册的「最近删除」中恢复。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>相册访问权限</h2>
+    <p>App 需要相册访问权限才能扫描照片。若未授权，请前往「系统设置 → 隐私与安全性 → 照片」中开启权限。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>功能建议</h2>
+    <p>欢迎通过邮件分享你的使用场景和功能建议，帮助我们让青迹变得更好。</p>
+</div>
+
+<!-- en -->
+<h1 data-lang="en">QingTrace · Support</h1>
+<p data-lang="en">Thanks for using QingTrace · Photo Cleaner! We'd love to hear from you if you have questions or suggestions.</p>
+<div class="card" data-lang="en">
+    <h2>Email Support</h2>
+    <p>Send us an email at <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> and we'll get back to you as soon as possible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Send Email</a>
+</div>
+<div class="card" data-lang="en">
+    <h2>Can deleted photos be recovered?</h2>
+    <p>Yes. Deletion is performed through the system photo library; photos go to "Recently Deleted" first and can be restored from there.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Photo Library Access</h2>
+    <p>The app needs photo library access to scan your photos. If not authorized, enable it in "System Settings → Privacy & Security → Photos".</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Feature Requests</h2>
+    <p>Have an idea to make QingTrace better? Tell us about your use case via email — we read every piece of feedback.</p>
+</div>
+
+<!-- ja -->
+<h1 data-lang="ja">QingTrace · サポート</h1>
+<p data-lang="ja">QingTrace · 写真クリーナーをご利用いただきありがとうございます！ご質問やご提案がございましたら、ぜひお聞かせください。</p>
+<div class="card" data-lang="ja">
+    <h2>メールサポート</h2>
+    <p><a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールをお送りください。できるだけ早く返信いたします。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">メールを送る</a>
+</div>
+<div class="card" data-lang="ja">
+    <h2>削除した写真は復元できますか？</h2>
+    <p>はい。削除はシステムのフォトライブラリを通じて行われ、写真はまず「最近削除した項目」に移動し、そこから復元できます。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>写真ライブラリへのアクセス</h2>
+    <p>アプリが写真をスキャンするには写真ライブラリへのアクセスが必要です。未許可の場合は「システム設定 → プライバシーとセキュリティ → 写真」で許可してください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>機能リクエスト</h2>
+    <p>QingTraceをより良くするためのアイデアがあれば、メールでお聞かせください。すべてのご意見に目を通しています。</p>
+</div>
+
+<!-- de -->
+<h1 data-lang="de">QingTrace · Support</h1>
+<p data-lang="de">Vielen Dank, dass Sie QingTrace · Foto-Cleaner nutzen! Wenn Sie Fragen oder Anregungen haben, freuen wir uns auf Ihre Nachricht.</p>
+<div class="card" data-lang="de">
+    <h2>E-Mail-Support</h2>
+    <p>Senden Sie uns eine E-Mail an <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> — wir antworten so schnell wie möglich.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">E-Mail senden</a>
+</div>
+<div class="card" data-lang="de">
+    <h2>Können gelöschte Fotos wiederhergestellt werden?</h2>
+    <p>Ja. Das Löschen erfolgt über die System-Fotomediathek; Fotos landen zuerst in „Zuletzt gelöscht" und können von dort wiederhergestellt werden.</p>
+</div>
+<div class="card" data-lang="de">
+    <h2>Zugriff auf die Fotomediathek</h2>
+    <p>Die App benötigt Zugriff auf die Fotomediathek, um Ihre Fotos zu scannen. Falls nicht autorisiert, aktivieren Sie ihn unter „Systemeinstellungen → Datenschutz & Sicherheit → Fotos".</p>
+</div>
+<div class="card" data-lang="de">
+    <h2>Funktionsvorschläge</h2>
+    <p>Haben Sie eine Idee, wie wir QingTrace verbessern können? Teilen Sie uns Ihren Anwendungsfall per E-Mail mit — wir lesen jedes Feedback.</p>
+</div>
+
+<!-- ko -->
+<h1 data-lang="ko">QingTrace · 지원</h1>
+<p data-lang="ko">QingTrace · 사진 정리를 이용해 주셔서 감사합니다! 질문이나 제안이 있으시면 언제든 알려주세요.</p>
+<div class="card" data-lang="ko">
+    <h2>이메일 지원</h2>
+    <p><a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>로 이메일을 보내주시면 최대한 빨리 답변 드리겠습니다.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">이메일 보내기</a>
+</div>
+<div class="card" data-lang="ko">
+    <h2>삭제한 사진을 복구할 수 있나요?</h2>
+    <p>네. 삭제는 시스템 사진 보관함을 통해 이루어지며, 사진은 먼저 '최근 삭제된 항목'으로 이동한 후 복원할 수 있습니다.</p>
+</div>
+<div class="card" data-lang="ko">
+    <h2>사진 보관함 접근 권한</h2>
+    <p>앱이 사진을 스캔하려면 사진 보관함 접근 권한이 필요합니다. 미허용인 경우 '시스템 설정 → 개인정보 보호 및 보안 → 사진'에서 권한을 허용해 주세요.</p>
+</div>
+<div class="card" data-lang="ko">
+    <h2>기능 제안</h2>
+    <p>QingTrace를 더 좋게 만들 아이디어가 있다면 이메일로 알려주세요. 모든 의견을 꼼꼼히 읽어보고 있습니다.</p>
+</div>
+
+<!-- es -->
+<h1 data-lang="es">QingTrace · Soporte</h1>
+<p data-lang="es">¡Gracias por usar QingTrace · Limpiador de Fotos! Si tienes preguntas o sugerencias, nos encantará saber de ti.</p>
+<div class="card" data-lang="es">
+    <h2>Soporte por correo</h2>
+    <p>Envíanos un correo a <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> y te responderemos lo antes posible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Enviar correo</a>
+</div>
+<div class="card" data-lang="es">
+    <h2>¿Se pueden recuperar las fotos eliminadas?</h2>
+    <p>Sí. La eliminación se realiza a través de la biblioteca del sistema; las fotos van primero a «Eliminado recientemente» y pueden restaurarse desde allí.</p>
+</div>
+<div class="card" data-lang="es">
+    <h2>Acceso a la biblioteca de fotos</h2>
+    <p>La app necesita acceso a la biblioteca de fotos para escanear tus fotos. Si no está autorizado, actívalo en «Ajustes del sistema → Privacidad y seguridad → Fotos».</p>
+</div>
+<div class="card" data-lang="es">
+    <h2>Sugerencias de funciones</h2>
+    <p>¿Tienes una idea para mejorar QingTrace? Cuéntanos tu caso de uso por correo: leemos todos los comentarios.</p>
+</div>
+
+<!-- fr -->
+<h1 data-lang="fr">QingTrace · Assistance</h1>
+<p data-lang="fr">Merci d'utiliser QingTrace · Nettoyeur de Photos ! Nous serions ravis de vous entendre si vous avez des questions ou des suggestions.</p>
+<div class="card" data-lang="fr">
+    <h2>Assistance par e-mail</h2>
+    <p>Envoyez-nous un e-mail à <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> et nous vous répondrons dès que possible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Envoyer un e-mail</a>
+</div>
+<div class="card" data-lang="fr">
+    <h2>Peut-on récupérer les photos supprimées ?</h2>
+    <p>Oui. La suppression s'effectue via la photothèque du système ; les photos vont d'abord dans « Supprimés récemment » et peuvent y être restaurées.</p>
+</div>
+<div class="card" data-lang="fr">
+    <h2>Accès à la photothèque</h2>
+    <p>L'application a besoin d'accéder à votre photothèque pour analyser vos photos. Si ce n'est pas autorisé, activez-le dans « Réglages système → Confidentialité et sécurité → Photos ».</p>
+</div>
+<div class="card" data-lang="fr">
+    <h2>Suggestions de fonctionnalités</h2>
+    <p>Une idée pour améliorer QingTrace ? Parlez-nous de votre cas d'usage par e-mail — nous lisons chaque retour.</p>
+</div>
+
+<!-- it -->
+<h1 data-lang="it">QingTrace · Supporto</h1>
+<p data-lang="it">Grazie per usare QingTrace · Pulizia Foto! Se hai domande o suggerimenti, ci farebbe piacere sentirti.</p>
+<div class="card" data-lang="it">
+    <h2>Supporto via email</h2>
+    <p>Scrivici a <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> e ti risponderemo il prima possibile.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Invia email</a>
+</div>
+<div class="card" data-lang="it">
+    <h2>Le foto eliminate possono essere recuperate?</h2>
+    <p>Sì. L'eliminazione avviene tramite la libreria di sistema; le foto finiscono prima in «Eliminati di recente» e possono essere ripristinate da lì.</p>
+</div>
+<div class="card" data-lang="it">
+    <h2>Accesso alla libreria foto</h2>
+    <p>L'app ha bisogno dell'accesso alla libreria foto per scansionare le tue foto. Se non autorizzato, abilitalo in «Impostazioni di sistema → Privacy e sicurezza → Foto».</p>
+</div>
+<div class="card" data-lang="it">
+    <h2>Suggerimenti di funzionalità</h2>
+    <p>Hai un'idea per migliorare QingTrace? Raccontaci il tuo caso d'uso via email: leggiamo ogni feedback.</p>
+</div>
+
+<!-- pt -->
+<h1 data-lang="pt">QingTrace · Suporte</h1>
+<p data-lang="pt">Obrigado por usar o QingTrace · Limpador de Fotos! Adoraríamos ouvir você se tiver dúvidas ou sugestões.</p>
+<div class="card" data-lang="pt">
+    <h2>Suporte por e-mail</h2>
+    <p>Envie um e-mail para <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> e responderemos o mais rápido possível.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Enviar e-mail</a>
+</div>
+<div class="card" data-lang="pt">
+    <h2>As fotos excluídas podem ser recuperadas?</h2>
+    <p>Sim. A exclusão é feita pela biblioteca do sistema; as fotos vão primeiro para «Apagados» e podem ser restauradas de lá.</p>
+</div>
+<div class="card" data-lang="pt">
+    <h2>Acesso à biblioteca de fotos</h2>
+    <p>O app precisa de acesso à biblioteca de fotos para escanear suas fotos. Se não estiver autorizado, ative em «Ajustes do sistema → Privacidade e segurança → Fotos».</p>
+</div>
+<div class="card" data-lang="pt">
+    <h2>Sugestões de recursos</h2>
+    <p>Tem uma ideia para melhorar o QingTrace? Conte seu caso de uso por e-mail — lemos todos os comentários.</p>
+</div>
+
+<!-- ru -->
+<h1 data-lang="ru">QingTrace · Поддержка</h1>
+<p data-lang="ru">Спасибо, что пользуетесь QingTrace · Очистка Фото! Будем рады вашим вопросам и предложениям.</p>
+<div class="card" data-lang="ru">
+    <h2>Поддержка по email</h2>
+    <p>Напишите нам на <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>, и мы ответим как можно скорее.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Написать письмо</a>
+</div>
+<div class="card" data-lang="ru">
+    <h2>Можно ли восстановить удалённые фото?</h2>
+    <p>Да. Удаление выполняется через системную фотобиблиотеку; фотографии сначала попадают в «Недавно удалённые» и могут быть восстановлены оттуда.</p>
+</div>
+<div class="card" data-lang="ru">
+    <h2>Доступ к фотобиблиотеке</h2>
+    <p>Приложению нужен доступ к фотобиблиотеке для сканирования фотографий. Если он не разрешён, включите его в «Системные настройки → Конфиденциальность и безопасность → Фото».</p>
+</div>
+<div class="card" data-lang="ru">
+    <h2>Предложения по функциям</h2>
+    <p>Есть идея, как улучшить QingTrace? Расскажите о своём сценарии по email — мы читаем каждый отзыв.</p>
+</div>
+
+<!-- zh-Hant -->
+<h1 data-lang="zh-Hant">青跡 · 技術支援</h1>
+<p data-lang="zh-Hant">感謝使用青跡·相冊清理！如有問題或建議，歡迎回饋。</p>
+<div class="card" data-lang="zh-Hant">
+    <h2>郵件回饋</h2>
+    <p>發送郵件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我們會盡快回覆。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">發送郵件</a>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>刪除的照片可以復原嗎？</h2>
+    <p>可以。刪除操作透過系統相簿完成，照片會先進入「最近刪除」，可在系統相簿的「最近刪除」中復原。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>相簿存取權限</h2>
+    <p>App 需要相簿存取權限才能掃描照片。若未授權，請前往「系統設定 → 隱私與安全性 → 照片」中開啟權限。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>功能建議</h2>
+    <p>歡迎透過郵件分享你的使用情境和功能建議，幫助我們讓青跡變得更好。</p>
+</div>
+
+<script>
+const supported = ['zh-Hans','en','ja','de','ko','es','fr','it','pt','ru','zh-Hant'];
+
+function showLang(lang) {
+    if (!supported.includes(lang)) lang = 'en';
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    supported.forEach(l => {
+        const btn = document.getElementById('btn-' + l.replace('zh-Hans','zh'));
+        if (btn) btn.classList.toggle('active', l === lang);
+    });
+    document.documentElement.lang = lang;
+}
+
+function switchLang(lang) {
+    showLang(lang);
+    try { localStorage.setItem('qingji-photo-lang', lang); } catch(e) {}
+}
+
+function detectLang() {
+    try {
+        const stored = localStorage.getItem('qingji-photo-lang');
+        if (stored && supported.includes(stored)) return stored;
+    } catch(e) {}
+    const nav = (navigator.language || '').split('-');
+    if (supported.includes(nav.join('-'))) return nav.join('-');
+    if (nav[0] === 'zh') {
+        const region = (navigator.language || '').toLowerCase();
+        return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
+    }
+    if (supported.includes(nav[0])) return nav[0];
+    return 'en';
+}
+
+showLang(detectLang());
+</script>
+
+</body>
+</html>

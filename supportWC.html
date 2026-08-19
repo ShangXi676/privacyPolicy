@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 — 青迹·水印相机</title>
+    <style>
+        :root { --bg: #f8f9fa; --card: #fff; --text: #333; --heading: #1a1a1a; --link: #06B6D4; --shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
+        h2 { font-size: 18px; margin-top: 0; color: #444; }
+        a { color: var(--link); }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
+        .btn { display: inline-block; background: var(--link); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--text); }
+        .lang-bar button.active { background: var(--link); color: #fff; border-color: var(--link); }
+        [data-lang] { display: none; }
+        [data-lang].show { display: revert; }
+        .card[data-lang].show { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="lang-bar">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en">English</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
+    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+</div>
+
+<!-- zh-Hans -->
+<h1 data-lang="zh-Hans">青迹 · 技术支持</h1>
+<p data-lang="zh-Hans">感谢使用青迹·水印相机！如有问题或建议，欢迎反馈。</p>
+<div class="card" data-lang="zh-Hans">
+    <h2>邮件反馈</h2>
+    <p>发送邮件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我们会尽快回复。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">发送邮件</a>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>水印照片保存在哪里？</h2>
+    <p>拍摄后的水印照片会自动保存到系统相册。若未保存成功，请前往「系统设置 → 隐私与安全性 → 照片」中确认本 App 的权限为「允许添加照片」。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>相机权限</h2>
+    <p>App 需要相机权限才能拍摄。若未授权，请前往「系统设置 → 隐私与安全性 → 相机」中开启权限，然后重启 App。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>地点水印不显示或位置不对</h2>
+    <p>地点水印需要定位权限。请前往「系统设置 → 隐私与安全性 → 定位服务」中开启，并确保本 App 已允许使用定位。在室内或弱信号环境下，定位可能不够精确。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>天气水印在哪里？</h2>
+    <p>天气水印为 Pro 功能，解锁 Pro 后选择含天气的模板即可使用。天气数据由 Apple WeatherKit 提供。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>如何恢复 Pro 购买？</h2>
+    <p>若已购买 Pro 但未生效，请在设置页点击「恢复购买」。若仍无法恢复，请邮件联系我们并提供 App Store 的购买凭证截图。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>功能建议</h2>
+    <p>欢迎通过邮件分享你的使用场景和功能建议，帮助我们让青迹变得更好。</p>
+</div>
+
+<!-- en -->
+<h1 data-lang="en">QingJi · Support</h1>
+<p data-lang="en">Thanks for using QingJi Watermark Camera! We'd love to hear from you if you have questions or suggestions.</p>
+<div class="card" data-lang="en">
+    <h2>Email Support</h2>
+    <p>Send us an email at <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> and we'll get back to you as soon as possible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Send Email</a>
+</div>
+<div class="card" data-lang="en">
+    <h2>Where are watermarked photos saved?</h2>
+    <p>Watermarked photos are saved to your system photo library automatically. If a photo was not saved, go to "System Settings → Privacy & Security → Photos" and make sure this app is set to "Add Photos".</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Camera Permission</h2>
+    <p>The app needs camera access to take photos. If not authorized, enable it in "System Settings → Privacy & Security → Camera", then restart the app.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Location watermark missing or inaccurate</h2>
+    <p>The location watermark requires location access. Please enable it in "System Settings → Privacy & Security → Location Services" and make sure this app is allowed to use your location. Indoors or with weak signals, location may be less accurate.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Where is the weather watermark?</h2>
+    <p>The weather watermark is a Pro feature. After unlocking Pro, choose a template that includes weather. Weather data is provided by Apple WeatherKit.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>How do I restore a Pro purchase?</h2>
+    <p>If you've purchased Pro but it hasn't taken effect, tap "Restore Purchases" on the Settings page. If it still doesn't work, email us with a screenshot of your App Store receipt.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Feature Requests</h2>
+    <p>Have an idea to make QingJi better? Tell us about your use case via email — we read every piece of feedback.</p>
+</div>
+
+<!-- zh-Hant -->
+<h1 data-lang="zh-Hant">青跡 · 技術支援</h1>
+<p data-lang="zh-Hant">感謝使用青跡·水印相機！如有問題或建議，歡迎回饋。</p>
+<div class="card" data-lang="zh-Hant">
+    <h2>郵件回饋</h2>
+    <p>發送郵件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我們會盡快回覆。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">發送郵件</a>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>浮水印照片儲存在哪裡？</h2>
+    <p>拍攝後的浮水印照片會自動儲存到系統相簿。若未儲存成功，請前往「系統設定 → 隱私與安全性 → 照片」中確認本 App 的權限為「允許加入照片」。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>相機權限</h2>
+    <p>App 需要相機權限才能拍攝。若未授權，請前往「系統設定 → 隱私與安全性 → 相機」中開啟權限，然後重新啟動 App。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>地點浮水印未顯示或位置不正確</h2>
+    <p>地點浮水印需要定位權限。請前往「系統設定 → 隱私與安全性 → 定位服務」中開啟，並確保本 App 已允許使用定位。在室內或弱訊號環境下，定位可能不夠精確。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>天氣浮水印在哪裡？</h2>
+    <p>天氣浮水印為 Pro 功能，解鎖 Pro 後選擇含天氣範本即可使用。天氣資料由 Apple WeatherKit 提供。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>如何恢復 Pro 購買？</h2>
+    <p>若已購買 Pro 但未生效，請在設定頁點選「恢復購買」。若仍無法恢復，請郵件聯絡我們並提供 App Store 的購買憑證截圖。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>功能建議</h2>
+    <p>歡迎透過郵件分享你的使用情境和功能建議，幫助我們讓青跡變得更好。</p>
+</div>
+
+<!-- ja -->
+<h1 data-lang="ja">QingJi · サポート</h1>
+<p data-lang="ja">QingJi ウォーターマークカメラをご利用いただきありがとうございます！ご質問やご提案がございましたら、ぜひお聞かせください。</p>
+<div class="card" data-lang="ja">
+    <h2>メールサポート</h2>
+    <p><a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールをお送りください。できるだけ早く返信いたします。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">メールを送る</a>
+</div>
+<div class="card" data-lang="ja">
+    <h2>ウォーターマーク付き写真はどこに保存されますか？</h2>
+    <p>撮影したウォーターマーク付き写真は、システムのフォトライブラリに自動的に保存されます。保存されない場合は、「システム設定 → プライバシーとセキュリティ → 写真」で本アプリの権限が「写真を追加」になっているかご確認ください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>カメラ権限</h2>
+    <p>アプリは撮影のためにカメラへのアクセスを必要とします。未許可の場合は「システム設定 → プライバシーとセキュリティ → カメラ」で許可し、アプリを再起動してください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>位置情報ウォーターマークが表示されない、または位置が正しくない</h2>
+    <p>位置情報ウォーターマークには位置情報へのアクセスが必要です。「システム設定 → プライバシーとセキュリティ → 位置情報サービス」で許可し、本アプリが位置情報を利用できるようにしてください。屋内や電波の弱い場所では位置情報が不正確になる場合があります。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>天気ウォーターマークはどこで使えますか？</h2>
+    <p>天気ウォーターマークはPro機能です。Proをアンロック後、天気を含むテンプレートを選択すると利用できます。天気データはApple WeatherKitによって提供されます。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>Pro購入を復元するには？</h2>
+    <p>Proを購入済みなのに有効にならない場合は、設定ページの「購入を復元」をタップしてください。それでも復元できない場合は、App Storeの購入レシートのスクリーンショットを添えてメールでお問い合わせください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>機能リクエスト</h2>
+    <p>QingJiをより良くするためのアイデアがあれば、メールでお聞かせください。すべてのご意見に目を通しています。</p>
+</div>
+
+<script>
+const supported = ['zh-Hans','en','zh-Hant','ja'];
+
+function showLang(lang) {
+    if (!supported.includes(lang)) lang = 'en';
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    supported.forEach(l => {
+        const btn = document.getElementById('btn-' + l.replace('zh-Hans','zh'));
+        if (btn) btn.classList.toggle('active', l === lang);
+    });
+    document.documentElement.lang = lang;
+}
+
+function switchLang(lang) {
+    showLang(lang);
+    try { localStorage.setItem('qingji-watermark-lang', lang); } catch(e) {}
+}
+
+function detectLang() {
+    try {
+        const stored = localStorage.getItem('qingji-watermark-lang');
+        if (stored && supported.includes(stored)) return stored;
+    } catch(e) {}
+    const nav = (navigator.language || '').split('-');
+    if (supported.includes(nav.join('-'))) return nav.join('-');
+    if (nav[0] === 'zh') {
+        const region = (navigator.language || '').toLowerCase();
+        return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
+    }
+    if (supported.includes(nav[0])) return nav[0];
+    return 'en';
+}
+
+showLang(detectLang());
+</script>
+
+</body>
+</html>

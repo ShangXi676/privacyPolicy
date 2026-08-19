@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 — 青迹·成事</title>
+    <style>
+        :root { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
+        h2 { font-size: 18px; margin-top: 0; color: #C8A45C; }
+        a { color: var(--link); }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
+        .btn { display: inline-block; background: var(--link); color: #0B0E14; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button { background: #1A1E27; border: 1px solid #333; border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--text); }
+        .lang-bar button.active { background: var(--link); color: #0B0E14; border-color: var(--link); }
+        [data-lang] { display: none; }
+        [data-lang].show { display: revert; }
+        .card[data-lang].show { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="lang-bar">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en">English</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
+    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+</div>
+
+<!-- zh-Hans -->
+<h1 data-lang="zh-Hans">青迹 · 技术支持</h1>
+<p data-lang="zh-Hans">感谢使用青迹·成事！如有问题或建议，欢迎反馈。</p>
+<div class="card" data-lang="zh-Hans">
+    <h2>邮件反馈</h2>
+    <p>发送邮件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我们会尽快回复。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">发送邮件</a>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>AI 对话没有回复 / 回复失败</h2>
+    <p>AI 功能需要联网调用第三方大语言模型服务（DeepSeek）。请确认：1) 手机网络可用；2) 稍等片刻后重试。若持续失败，请截图对话页面并邮件反馈给我们。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>AI 回复很慢</h2>
+    <p>首次调用需要连接 AI 服务并加载上下文，通常需数秒；网络不佳时会更慢，请耐心等待，不要重复发送。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>我的目标与数据存在哪里？</h2>
+    <p>目标、进度与记录默认保存在设备本地。若你开启了 iCloud，数据会通过你的 Apple ID 自动同步到你的其他设备，我们不会上传到自有服务器。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>如何删除我的数据？</h2>
+    <p>前往「设置 → 账号管理 → 注销数据（清除本机数据）」即可一键删除全部本地数据。iCloud 中的数据可在系统设置中删除本 App 的 iCloud 数据。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>头像无法设置 / 相册权限</h2>
+    <p>设置自定义头像需要相册权限。请前往「系统设置 → 隐私与安全性 → 照片」确认本 App 已获得相应权限，然后重启 App。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>进展照片无法拍摄 / 相机权限</h2>
+    <p>进展记录支持拍摄照片作为证据，需要相机权限。若未授权，请前往「系统设置 → 隐私与安全性 → 相机」中开启权限，然后重启 App。</p>
+</div>
+<div class="card" data-lang="zh-Hans">
+    <h2>功能建议</h2>
+    <p>欢迎通过邮件分享你的使用场景和功能建议，帮助我们让青迹·成事变得更好。</p>
+</div>
+
+<!-- en -->
+<h1 data-lang="en">QingJi · Support</h1>
+<p data-lang="en">Thanks for using QingJi·ChengShi! We'd love to hear from you if you have questions or suggestions.</p>
+<div class="card" data-lang="en">
+    <h2>Email Support</h2>
+    <p>Send us an email at <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> and we'll get back to you as soon as possible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">Send Email</a>
+</div>
+<div class="card" data-lang="en">
+    <h2>AI chat not responding / failed</h2>
+    <p>AI features require an internet connection to a third-party large language model service (DeepSeek). Please make sure: 1) your network is available; 2) wait a moment and retry. If it keeps failing, screenshot the chat page and email us.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>AI replies are slow</h2>
+    <p>The first call needs to connect to the AI service and load context, which usually takes a few seconds; a poor network can make it slower. Please be patient and do not send duplicate messages.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Where is my goal data stored?</h2>
+    <p>Goals, progress, and records are stored locally on your device by default. If you enable iCloud, data is automatically synced to your other devices through your Apple ID. We do not upload it to our own servers.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>How do I delete my data?</h2>
+    <p>Go to "Settings → Account Management → Wipe Data (Clear Local Data)" to delete all local data in one tap. iCloud data can be removed in System Settings by deleting this app's iCloud data.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Avatar won't set / Photo Library permission</h2>
+    <p>Setting a custom avatar requires photo library access. Go to "System Settings → Privacy & Security → Photos", make sure this app has the appropriate permission, then restart the app.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Can't take progress photos / Camera permission</h2>
+    <p>The progress record feature supports taking photos as evidence and requires camera access. If not authorized, enable it in "System Settings → Privacy & Security → Camera", then restart the app.</p>
+</div>
+<div class="card" data-lang="en">
+    <h2>Feature Requests</h2>
+    <p>Have an idea to make QingJi·ChengShi better? Tell us about your use case via email — we read every piece of feedback.</p>
+</div>
+
+<!-- zh-Hant -->
+<h1 data-lang="zh-Hant">青跡 · 技術支援</h1>
+<p data-lang="zh-Hant">感謝使用青跡·成事！如有問題或建議，歡迎回饋。</p>
+<div class="card" data-lang="zh-Hant">
+    <h2>郵件回饋</h2>
+    <p>發送郵件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我們會盡快回覆。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">發送郵件</a>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>AI 對話沒有回覆 / 回覆失敗</h2>
+    <p>AI 功能需要連網呼叫第三方大型語言模型服務（DeepSeek）。請確認：1) 手機網路可用；2) 稍等片刻後重試。若持續失敗，請截圖對話頁面並郵件回饋給我們。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>AI 回覆很慢</h2>
+    <p>首次呼叫需要連接 AI 服務並載入上下文，通常需數秒；網路不佳時會更慢，請耐心等待，不要重複發送。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>我的目標與資料存在哪裡？</h2>
+    <p>目標、進度與記錄預設保存在裝置本地。若你開啟了 iCloud，資料會透過你的 Apple ID 自動同步到你的其他裝置，我們不會上傳到自有伺服器。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>如何刪除我的資料？</h2>
+    <p>前往「設定 → 帳號管理 → 註銷資料（清除本機資料）」即可一鍵刪除全部本地資料。iCloud 中的資料可在系統設定中刪除本 App 的 iCloud 資料。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>頭像無法設定 / 相簿權限</h2>
+    <p>設定自訂頭像需要相簿權限。請前往「系統設定 → 隱私與安全性 → 照片」確認本 App 已獲得相應權限，然後重新啟動 App。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>進展照片無法拍攝 / 相機權限</h2>
+    <p>進展記錄支援拍攝照片作為證據，需要相機權限。若未授權，請前往「系統設定 → 隱私與安全性 → 相機」中開啟權限，然後重新啟動 App。</p>
+</div>
+<div class="card" data-lang="zh-Hant">
+    <h2>功能建議</h2>
+    <p>歡迎透過郵件分享你的使用情境和功能建議，幫助我們讓青跡·成事變得更好。</p>
+</div>
+
+<!-- ja -->
+<h1 data-lang="ja">QingJi · サポート</h1>
+<p data-lang="ja">QingJi·成事をご利用いただきありがとうございます！ご質問やご提案がございましたら、ぜひお聞かせください。</p>
+<div class="card" data-lang="ja">
+    <h2>メールサポート</h2>
+    <p><a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールをお送りください。できるだけ早く返信いたします。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com">メールを送る</a>
+</div>
+<div class="card" data-lang="ja">
+    <h2>AI対話が応答しない / 失敗する</h2>
+    <p>AI機能は、第三者大規模言語モデルサービス（DeepSeek）へのインターネット接続が必要です。1) 端末のネットワークが利用可能か、2) 少し待ってから再試行するかをご確認ください。それでも失敗する場合は、対話画面のスクリーンショットを添えてメールでお問い合わせください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>AIの応答が遅い</h2>
+    <p>初回の呼び出しではAIサービスへの接続とコンテキストの読み込みが必要で、通常数秒かかります。ネットワークが悪いとさらに遅くなるため、お待ちいただき、重複送信はしないでください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>目標データはどこに保存されますか？</h2>
+    <p>目標、進捗、記録はデフォルトで端末内に保存されます。iCloudを有効にすると、データはApple IDを通じて他のデバイスに自動同期されます。自社サーバーにアップロードすることはありません。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>データを削除するには？</h2>
+    <p>「設定 → アカウント管理 → データ消去（ローカルデータを消去）」から、すべてのローカルデータをワンタップで削除できます。iCloud内のデータは、システム設定で本アプリのiCloudデータを削除してください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>アバターが設定できない / 写真ライブラリ権限</h2>
+    <p>カスタムアバターの設定には写真ライブラリへのアクセスが必要です。「システム設定 → プライバシーとセキュリティ → 写真」で本アプリに適切な権限を付与し、アプリを再起動してください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>進捗写真が撮れない / カメラ権限</h2>
+    <p>進捗記録機能では証拠として写真を撮影でき、カメラへのアクセスが必要です。未許可の場合は「システム設定 → プライバシーとセキュリティ → カメラ」で許可し、アプリを再起動してください。</p>
+</div>
+<div class="card" data-lang="ja">
+    <h2>機能リクエスト</h2>
+    <p>QingJi·成事をより良くするためのアイデアがあれば、メールでお聞かせください。すべてのご意見に目を通しています。</p>
+</div>
+
+<script>
+const supported = ['zh-Hans','en','zh-Hant','ja'];
+
+function showLang(lang) {
+    if (!supported.includes(lang)) lang = 'en';
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    supported.forEach(l => {
+        const btn = document.getElementById('btn-' + l.replace('zh-Hans','zh'));
+        if (btn) btn.classList.toggle('active', l === lang);
+    });
+    document.documentElement.lang = lang;
+}
+
+function switchLang(lang) {
+    showLang(lang);
+    try { localStorage.setItem('qingji-chengshi-support-lang', lang); } catch(e) {}
+}
+
+function detectLang() {
+    try {
+        const stored = localStorage.getItem('qingji-chengshi-support-lang');
+        if (stored && supported.includes(stored)) return stored;
+    } catch(e) {}
+    const nav = (navigator.language || '').split('-');
+    if (supported.includes(nav.join('-'))) return nav.join('-');
+    if (nav[0] === 'zh') {
+        const region = (navigator.language || '').toLowerCase();
+        return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
+    }
+    if (supported.includes(nav[0])) return nav[0];
+    return 'en';
+}
+
+showLang(detectLang());
+</script>
+
+</body>
+</html>

@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>技术支持 — 青迹·成事</title>
     <style>
-        :root { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); }
+        :root { color-scheme: light dark; --bg: #F8F9FA; --card: #FFFFFF; --text: #111827; --heading: #111827; --sub: #6B7280; --link: #2563EB; --h2: #2563EB; --shadow: 0 1px 3px rgba(0,0,0,0.08); --btn-bg: #FFFFFF; --btn-border: #D1D5DB; --btn-text: #111827; --btn-active-text: #FFFFFF; }
+        :root[data-theme="dark"] { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
         h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
-        h2 { font-size: 18px; margin-top: 0; color: #C8A45C; }
+        h2 { font-size: 18px; margin-top: 0; color: var(--h2); }
         a { color: var(--link); }
         .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
         .btn { display: inline-block; background: var(--link); color: #0B0E14; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; }
         .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-bar button { background: #1A1E27; border: 1px solid #333; border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--text); }
-        .lang-bar button.active { background: var(--link); color: #0B0E14; border-color: var(--link); }
+        .lang-bar button { background: var(--btn-bg); border: 1px solid var(--btn-border); border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--btn-text); }
+        .lang-bar button.active { background: var(--link); color: var(--btn-active-text); border-color: var(--link); }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+        }
         [data-lang] { display: none; }
         [data-lang].show { display: revert; }
         .card[data-lang].show { display: block; }

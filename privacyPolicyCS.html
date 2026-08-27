@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策 — 青迹·成事</title>
     <style>
-        :root { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; }
+        :root { color-scheme: light dark; --bg: #F8F9FA; --text: #111827; --heading: #111827; --sub: #6B7280; --link: #2563EB; --h2: #2563EB; --btn-bg: #FFFFFF; --btn-border: #D1D5DB; --btn-text: #111827; --btn-active-text: #FFFFFF; }
+        :root[data-theme="dark"] { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
         h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
-        h2 { font-size: 18px; margin-top: 28px; color: #C8A45C; }
+        h2 { font-size: 18px; margin-top: 28px; color: var(--h2); }
         .meta { color: var(--sub); font-size: 14px; margin-bottom: 24px; }
         a { color: var(--link); }
         .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-bar button { background: #1A1E27; border: 1px solid #333; border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--text); }
-        .lang-bar button.active { background: var(--link); color: #0B0E14; border-color: var(--link); }
+        .lang-bar button { background: var(--btn-bg); border: 1px solid var(--btn-border); border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--btn-text); }
+        .lang-bar button.active { background: var(--link); color: var(--btn-active-text); border-color: var(--link); }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+        }
         [data-lang] { display: none; }
         [data-lang].show { display: revert; }
     </style>
@@ -35,6 +39,8 @@
 <p data-lang="zh-Hans">本 App 的核心数据（目标、里程碑、阶段进度、进展记录、个人资料）默认保存在你的设备本地，并通过你的 Apple iCloud 在你的设备之间自动同步（若你启用了 iCloud）。我们不会将这些数据上传至自有服务器，也不会用于广告投放。</p>
 <h2 data-lang="zh-Hans">AI 对话功能与第三方服务</h2>
 <p data-lang="zh-Hans">AI 引导对话功能由第三方大语言模型服务商（DeepSeek，<a href="https://www.deepseek.com" target="_blank" rel="noopener">deepseek.com</a>）提供。当你使用 AI 对话、AI 目标拆解等生成式功能时，你输入的内容以及相关的目标上下文（如目标描述、当前计划阶段）会被发送至该第三方服务以生成回复。这些内容仅用于当次回复生成，我们不会用于其他用途，也不向其他任何第三方分享。请勿在对话中输入身份证号、银行卡号、医疗记录等敏感个人信息。</p>
+<h2 data-lang="zh-Hans">Ai 个性化与你的资料</h2>
+<p data-lang="zh-Hans">为提供更贴合你职业与目标的 Ai 个性化引导，在获得你的授权后（你可在「设置 → Ai 上下文 → Ai 使用我的资料作为上下文」随时关闭），本 App 会将你的职业、目标概览（进行中/已完成/连续达成）、最近完成目标与已解锁徽章等摘要信息随当次对话发送至第三方大语言模型服务商，用于生成本次回复。上述信息仅以摘要形式使用，不含照片内容、聊天记录全文与账号标识，仅用于当次回复生成，不做训练、不用于画像商业化。关闭该开关后，Ai 将仅使用当前目标上下文，功能不受影响。</p>
 <h2 data-lang="zh-Hans">相册与相机权限</h2>
 <p data-lang="zh-Hans">设置自定义头像时，本 App 需要访问你的相册（仅在你主动选择照片时读取，照片仅保存在本机）；进展记录功能支持拍摄照片作为目标进展的证据，需要相机权限。所有照片仅在你的设备上处理与存储，不会被上传。</p>
 <h2 data-lang="zh-Hans">本地存储与 iCloud 同步</h2>
@@ -56,6 +62,8 @@
 <p data-lang="en">Your core data (goals, milestones, phase progress, progress records, profile) is stored locally on your device by default and automatically synced across your devices through your Apple iCloud (if you enable iCloud). We do not upload this data to our own servers, and we do not use it for advertising.</p>
 <h2 data-lang="en">AI Conversation &amp; Third-Party Services</h2>
 <p data-lang="en">The AI-guided conversation feature is powered by a third-party large language model service provider (DeepSeek, <a href="https://www.deepseek.com" target="_blank" rel="noopener">deepseek.com</a>). When you use AI conversation or AI goal breakdown features, the content you input and related goal context (such as the goal description and current plan phase) are sent to this third-party service to generate replies. This content is used solely for the current reply generation, is not used for any other purpose, and is not shared with any other third party. Please do not enter sensitive personal information such as ID numbers, bank card numbers, or medical records in conversations.</p>
+<h2 data-lang="en">AI Personalization &amp; Your Data</h2>
+<p data-lang="en">To provide AI guidance more tailored to your career and goals, with your consent (you can turn it off anytime at "Settings → AI Context → AI Uses My Profile as Context"), the App sends a summary of your profile—such as your career, goal overview (in-progress / completed / consecutive days), most recently completed goal, and unlocked badges—to the third-party LLM provider with each conversation to generate the reply. This information is used as a summary only, excluding photo content, full chat transcripts, and account identifiers, is used solely for generating the current reply, and is never used for training or profiling commercialization. When the toggle is off, AI will only use the current goal context, and no functionality is affected.</p>
 <h2 data-lang="en">Photo Library &amp; Camera Access</h2>
 <p data-lang="en">To set a custom avatar, the App needs access to your photo library (read only when you actively select a photo; photos are kept only on your device). The progress record feature supports taking photos as evidence of goal progress and requires camera access. All photos are processed and stored only on your device and are never uploaded.</p>
 <h2 data-lang="en">Local Storage &amp; iCloud Sync</h2>
@@ -77,6 +85,8 @@
 <p data-lang="zh-Hant">本 App 的核心資料（目標、里程碑、階段進度、進展記錄、個人資料）預設保存在你的裝置本地，並透過你的 Apple iCloud 在你的裝置之間自動同步（若你啟用了 iCloud）。我們不會將這些資料上傳至自有伺服器，也不會用於廣告投放。</p>
 <h2 data-lang="zh-Hant">AI 對話功能與第三方服務</h2>
 <p data-lang="zh-Hant">AI 引導對話功能由第三方大型語言模型服務商（DeepSeek，<a href="https://www.deepseek.com" target="_blank" rel="noopener">deepseek.com</a>）提供。當你使用 AI 對話、AI 目標拆解等生成式功能時，你輸入的內容以及相關的目標上下文（如目標描述、目前計劃階段）會被傳送至該第三方服務以產生回覆。這些內容僅用於當次回覆產生，我們不會用於其他用途，也不會分享給任何其他第三方。請勿在對話中輸入身分證號碼、銀行卡號、醫療紀錄等敏感個人資訊。</p>
+<h2 data-lang="zh-Hant">Ai 個人化與你的資料</h2>
+<p data-lang="zh-Hant">為提供更貼合你職業與目標的 Ai 個人化引導，在獲得你的授權後（你可在「設定 → Ai 上下文 → Ai 使用我的資料作為上下文」隨時關閉），本 App 會將你的職業、目標概覽（進行中/已完成/連續達成）、最近完成目標與已解鎖徽章等摘要資訊隨當次對話發送至第三方大語言模型服務商，用於產生本次回覆。上述資訊僅以摘要形式使用，不含照片內容、聊天記錄全文與帳號識別，僅用於當次回覆產生，不做訓練、不用於畫像商業化。關閉該開關後，Ai 將僅使用當前目標上下文，功能不受影響。</p>
 <h2 data-lang="zh-Hant">相簿與相機權限</h2>
 <p data-lang="zh-Hant">設定自訂頭像時，本 App 需要存取你的相簿（僅在你主動選擇照片時讀取，照片僅保存在本機）；進展記錄功能支援拍攝照片作為目標進展的證據，需要相機權限。所有照片僅在你的裝置上處理與儲存，不會被上傳。</p>
 <h2 data-lang="zh-Hant">本地儲存與 iCloud 同步</h2>
@@ -98,6 +108,8 @@
 <p data-lang="ja">本アプリの主要データ（目標、マイルストーン、段階の進捗、進捗記録、プロフィール）は、デフォルトでデバイス内に保存され、iCloudを有効にしている場合はApple iCloudを通じてデバイス間で自動同期されます。このデータを自社サーバーにアップロードすることはなく、広告に利用することもありません。</p>
 <h2 data-lang="ja">AI対話機能と第三者サービス</h2>
 <p data-lang="ja">AIガイド対話機能は、第三者大規模言語モデルサービスプロバイダー（DeepSeek、<a href="https://www.deepseek.com" target="_blank" rel="noopener">deepseek.com</a>）によって提供されます。AI対話やAI目標分解機能を利用する際、入力した内容および関連する目標コンテキスト（目標の説明や現在の計画段階など）は、回答を生成するためにこの第三者サービスに送信されます。これらの内容はその回の回答生成のみに使用され、他の目的には使用されず、他の第三者とは共有されません。対話には身分証明書番号、銀行カード番号、医療記録などの機密性の高い個人情報を入力しないでください。</p>
+<h2 data-lang="ja">AIパーソナライズとあなたのデータ</h2>
+<p data-lang="ja">あなたの職業や目標に合わせたAIガイドを提供するため、ご同意の上（「設定 → AIコンテキスト → AIが私のプロフィールをコンテキストとして使用」でいつでもオフにできます）、本アプリは職業、目標概要（進行中/完了/連続達成）、最近完了した目標、解除したバッジなどの要約情報を、その回の会話とともに第三者LLMプロバイダーに送信し、返信を生成します。これらの情報は要約としてのみ使用され、写真コンテンツ、チャット履歴の全文、アカウント識別情報は含まれず、その回の返信生成のみに使用され、トレーニングやプロファイリングの商業利用には使用されません。スイッチをオフにすると、AIは現在の目標コンテキストのみを使用し、機能に影響はありません。</p>
 <h2 data-lang="ja">写真ライブラリとカメラへのアクセス</h2>
 <p data-lang="ja">カスタムアバターを設定する際、本アプリは写真ライブラリへのアクセスを必要とします（写真を自ら選択した場合のみ読み取り、写真は端末内にのみ保存されます）。進捗記録機能では目標の進捗の証拠として写真を撮影でき、カメラへのアクセスが必要です。すべての写真はデバイス上でのみ処理・保存され、アップロードされることはありません。</p>
 <h2 data-lang="ja">ローカル保存とiCloud同期</h2>

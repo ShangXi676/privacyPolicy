@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 — 青迹·知行</title>
+    <style>
+        :root { color-scheme: light dark; --bg: #F8F9FA; --text: #111827; --heading: #111827; --sub: #6B7280; --link: #2563EB; --h2: #2563EB; --btn-bg: #FFFFFF; --btn-border: #D1D5DB; --btn-text: #111827; --btn-active-text: #FFFFFF; }
+        :root[data-theme="dark"] { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
+        h2 { font-size: 18px; margin-top: 28px; color: var(--h2); }
+        .meta { color: var(--sub); font-size: 14px; margin-bottom: 24px; }
+        a { color: var(--link); }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button { background: var(--btn-bg); border: 1px solid var(--btn-border); border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--btn-text); }
+        .lang-bar button.active { background: var(--link); color: var(--btn-active-text); border-color: var(--link); }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+        }
+        [data-lang] { display: none; }
+        [data-lang].show { display: revert; }
+    </style>
+</head>
+<body>
+
+<div class="lang-bar">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en">English</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
+    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+</div>
+
+<!-- zh-Hans -->
+<h1 data-lang="zh-Hans">青迹·知行 · 隐私政策</h1>
+<p class="meta" data-lang="zh-Hans">生效日期：2026 年 9 月 2 日</p>
+<p data-lang="zh-Hans">欢迎使用青迹·知行（英文名 ReadAct，以下简称「本 App」）。本 App 是一款「把书变成用得上的本事」的阅读转化工具：你将自己合法持有的书或长文档上传到本 App，AI 会将其蒸馏为结构化的技能包（框架、原则、方法、反例、术语、决策规则与问题地图），你可以通过产出、陪练、任务、问答等模式，把书中的方法论应用到真实场景，所有生成内容均带引用溯源。本 App 以匿名方式使用，不建立账号体系。我们非常重视你的隐私，本政策说明我们如何收集、使用与保护你的数据。</p>
+<h2 data-lang="zh-Hans">一、我们收集的信息</h2>
+<p data-lang="zh-Hans"><strong>内容数据</strong>：你主动上传的书/文档原文仅保存在你的设备本地及你的个人 iCloud（通过 CloudKit/SwiftData 同步）中，用于本地展示、提炼与问答；除下文「AI 处理」所述的必要文本分块外，不会上传至我们自有服务器，也不会用于广告投放。<br>
+<strong>使用数据</strong>：本 App 不采集使用行为，不做统计分析上报，不含广告追踪。为执行配额管理，我们会记录与你设备生成的匿名标识符关联的蒸馏/调用次数与 token 用量；该记录不包含你的任何内容，也无法据此识别你的个人身份。</p>
+<h2 data-lang="zh-Hans">二、匿名使用与配额</h2>
+<p data-lang="zh-Hans">本 App 无需注册账号，不强制收集姓名、手机号、邮箱等可识别你个人身份的信息。为提供免费额度、Pro 订阅与加购包，本 App 与后端服务使用设备生成的匿名标识符计量配额。你可随时清除 App 数据或删除本 App，相应配额记录随之失效。</p>
+<h2 data-lang="zh-Hans">三、AI 处理与第三方服务</h2>
+<p data-lang="zh-Hans">提炼、问答、陪练、产出等 AI 功能由第三方大语言模型服务商提供。当你使用这些功能时，我们会将解析后的必要文本分块，通过我们部署的转发服务（readact.shxlab.com）发送至第三方大语言模型服务商以生成回复。目前接入的模型包括 DeepSeek（蒸馏默认固定使用 DeepSeek-V4-Pro；问答/产出等会按可用性与成本在 DeepSeek、通义千问、智谱 GLM 之间路由）。每次 AI 生成的内容均会携带模型标识（modelTag），标注本次实际提供服务的模型。你的输入仅用于当次生成，转发服务不留存对话内容，我们不会将你的内容用于模型训练或用户画像。请勿上传或输入身份证号、银行卡号、医疗记录等敏感个人信息。</p>
+<h2 data-lang="zh-Hans">四、提炼点与计费</h2>
+<p data-lang="zh-Hans">本 App 采用「提炼点 + 调用次数」模式：每蒸馏一本书按有效字数消耗提炼点（约每 30 万字消耗 1 点，单本 1–10 点），问答/产出/陪练等按调用次数计。免费用户每月享有一定提炼点与调用次数；你可通过订阅 Pro 或购买加购包获取更多额度。所有付费均通过 App Store 内购（IAP）完成，由 Apple 处理支付，本 App 不收集你的支付信息。</p>
+<h2 data-lang="zh-Hans">五、本地存储与 iCloud 同步</h2>
+<p data-lang="zh-Hans">你的书、技能包、问答记录与偏好设置通过 Apple CloudKit/SwiftData 同步至你的个人 iCloud 账户，受你的 Apple ID 安全机制保护。若你关闭 iCloud 同步，数据仅保存在本设备。</p>
+<h2 data-lang="zh-Hans">六、本地通知</h2>
+<p data-lang="zh-Hans">任务提醒、蒸馏完成通知等在设备本地触发，不因此上传任何数据。你可随时在系统设置中关闭通知权限。</p>
+<h2 data-lang="zh-Hans">七、广告与追踪</h2>
+<p data-lang="zh-Hans">本 App 不含第三方广告，不申请广告标识符（IDFA），不进行跨 App 或跨网站追踪。</p>
+<h2 data-lang="zh-Hans">八、儿童隐私</h2>
+<p data-lang="zh-Hans">本 App 面向成年用户，不面向 13 岁以下儿童提供服务，亦不有意收集儿童的个人信息。若你为监护人并发现相关情况，请通过文末联系方式联系我们。</p>
+<h2 data-lang="zh-Hans">九、删除你的数据</h2>
+<p data-lang="zh-Hans">你可以随时删除单本书籍（书籍详情页 → 删除书籍），或清除全部数据（设置 → 清除 iCloud 数据）；删除 App 后，也可在系统设置中选择删除来自 iCloud 的数据。删除后相关数据不可恢复。</p>
+<h2 data-lang="zh-Hans">十、政策更新</h2>
+<p data-lang="zh-Hans">我们可能不时更新本政策。重大变更将展示于本页面，更新后的生效日期以页面顶部为准。</p>
+<h2 data-lang="zh-Hans">十一、联系我们</h2>
+<p data-lang="zh-Hans">如对本政策有任何疑问，请邮件联系：<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
+
+<!-- en -->
+<h1 data-lang="en">ReadAct · Privacy Policy</h1>
+<p class="meta" data-lang="en">Effective Date: September 2, 2026</p>
+<p data-lang="en">Welcome to ReadAct ("QingJi·ZhiXing / 青迹·知行", hereinafter "the App"). The App is a reading-to-application tool that turns your books into usable skills: you upload books or long-form documents that you lawfully own, and AI distills them into structured skill packs (frameworks, principles, methods, counter-examples, terminology, decision rules and a question map). You can then apply the methodology to real scenarios through Produce, Coach, Task, and Q&amp;A modes, with citation traceability on all generated content. The App is used anonymously and does not maintain an account system. We take your privacy seriously. This policy explains how we collect, use, and protect your data.</p>
+<h2 data-lang="en">1. What Data We Collect</h2>
+<p data-lang="en"><strong>Content data</strong>: The books/documents you upload are stored only on your device and in your personal iCloud (synced via CloudKit/SwiftData), for local display, distillation, and Q&amp;A. Except for the necessary text chunks described in the "AI Processing" section below, your content is not uploaded to our own servers and is never used for advertising.<br>
+<strong>Usage data</strong>: The App does not collect behavioral analytics, does not perform statistical reporting, and contains no ad tracking. To manage quotas, we record distillation/call counts and token usage associated with an anonymous identifier generated by your device. This record contains none of your content and cannot be used to identify you personally.</p>
+<h2 data-lang="en">2. Anonymous Use &amp; Quota</h2>
+<p data-lang="en">The App requires no registration and does not force collection of personally identifiable information such as your name, phone number, or email. To provide free allowances, the Pro subscription, and add-on packs, the App and backend services measure quota via an anonymous device-generated identifier. You may clear the App's data or delete the App at any time, after which the corresponding quota records cease to apply.</p>
+<h2 data-lang="en">3. AI Processing &amp; Third-Party Services</h2>
+<p data-lang="en">AI features such as distillation, Q&amp;A, coaching, and production are powered by third-party large language model providers. When you use these features, we send necessary parsed text chunks through our relay service (readact.shxlab.com) to a third-party LLM provider to generate a response. Currently integrated models include DeepSeek (distillation is fixed to DeepSeek-V4-Pro by default; Q&amp;A/production requests are routed among DeepSeek, Qwen, and Zhipu GLM based on availability and cost). Each AI-generated response carries a model tag (modelTag) indicating the model that actually served the request. Your input is used solely to generate the current response; the relay does not retain conversation content, and we do not use your content for model training or profiling. Please do not upload or enter sensitive personal information such as ID numbers, bank card numbers, or medical records.</p>
+<h2 data-lang="en">4. Distill Points &amp; Billing</h2>
+<p data-lang="en">The App uses a "distill points + calls" model: distilling a book consumes distill points based on effective word count (approximately 1 point per 300,000 words, 1–10 points per book), while Q&amp;A/production/coaching counts as calls. Free users receive a monthly allowance of points and calls; you can obtain more by subscribing to Pro or purchasing add-on packs. All payments are processed through App Store In-App Purchases (IAP) by Apple; the App does not collect your payment information.</p>
+<h2 data-lang="en">5. Local Storage &amp; iCloud Sync</h2>
+<p data-lang="en">Your books, skill packs, Q&amp;A history, and preferences are synced to your personal iCloud account via Apple CloudKit/SwiftData, protected by your Apple ID security. If you disable iCloud sync, data remains on this device only.</p>
+<h2 data-lang="en">6. Local Notifications</h2>
+<p data-lang="en">Task reminders and distillation-completion notifications are triggered locally on your device and do not upload any data. You may disable notification permission at any time in System Settings.</p>
+<h2 data-lang="en">7. Advertising &amp; Tracking</h2>
+<p data-lang="en">The App contains no third-party advertising, does not request the Advertising Identifier (IDFA), and does not engage in cross-app or cross-site tracking.</p>
+<h2 data-lang="en">8. Children's Privacy</h2>
+<p data-lang="en">The App is intended for adult users, is not directed to children under 13, and does not knowingly collect personal information from children. If you are a guardian and believe a child has provided information, please contact us using the details below.</p>
+<h2 data-lang="en">9. Deleting Your Data</h2>
+<p data-lang="en">You can delete an individual book at any time (Book Detail → Delete Book), or clear all data (Settings → Clear iCloud Data). After deleting the App, you can also choose "Delete Data from iCloud" in System Settings. Deleted data cannot be recovered.</p>
+<h2 data-lang="en">10. Changes to This Policy</h2>
+<p data-lang="en">We may update this policy from time to time. Material changes will be posted on this page, and the effective date at the top of the page will apply.</p>
+<h2 data-lang="en">11. Contact Us</h2>
+<p data-lang="en">For any privacy-related questions, please contact: <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
+
+<!-- zh-Hant -->
+<h1 data-lang="zh-Hant">青跡·知行 · 隱私政策</h1>
+<p class="meta" data-lang="zh-Hant">生效日期：2026 年 9 月 2 日</p>
+<p data-lang="zh-Hant">歡迎使用青跡·知行（英文名 ReadAct，以下簡稱「本 App」）。本 App 是一款「把書變成用得上的本事」的閱讀轉化工具：你將自己合法持有的書或長文件上傳到本 App，AI 會將其蒸餾為結構化的技能包（框架、原則、方法、反例、術語、決策規則與問題地圖），你可以透過產出、陪練、任務、問答等模式，把書中的方法論應用到真實場景，所有生成內容均帶引用溯源。本 App 以匿名方式使用，不建立帳號體系。我們非常重視你的隱私，本政策說明我們如何收集、使用與保護你的資料。</p>
+<h2 data-lang="zh-Hant">一、我們收集的資訊</h2>
+<p data-lang="zh-Hant"><strong>內容資料</strong>：你主動上傳的書／文件原文僅保存在你的裝置本地及你的個人 iCloud（透過 CloudKit/SwiftData 同步）中，用於本地展示、蒸餾與問答；除下文「AI 處理」所述的必要文字分塊外，不會上傳至我們自有伺服器，也不會用於廣告投放。<br>
+<strong>使用資料</strong>：本 App 不採集使用行為，不做統計分析上報，不含廣告追蹤。為執行配額管理，我們會記錄與你裝置生成的匿名識別碼關聯的蒸餾／呼叫次數與 token 用量；該記錄不含你的任何內容，也無法據此識別你的個人身分。</p>
+<h2 data-lang="zh-Hant">二、匿名使用與配額</h2>
+<p data-lang="zh-Hant">本 App 無需註冊帳號，不強制收集姓名、手機號碼、信箱等可識別你個人身分的資訊。為提供免費額度、Pro 訂閱與加購包，本 App 與後端服務使用裝置生成的匿名識別碼計量配額。你可隨時清除 App 資料或刪除本 App，相應配額記錄隨之失效。</p>
+<h2 data-lang="zh-Hant">三、AI 處理與第三方服務</h2>
+<p data-lang="zh-Hant">蒸餾、問答、陪練、產出等 AI 功能由第三方大型語言模型服務商提供。當你使用這些功能時，我們會將解析後的必要文字分塊，透過我們部署的轉發服務（readact.shxlab.com）發送至第三方大型語言模型服務商以產生回覆。目前接入的模型包括 DeepSeek（蒸餾預設固定使用 DeepSeek-V4-Pro；問答／產出等會依可用性與成本在 DeepSeek、通義千問、智譜 GLM 之間路由）。每次 AI 生成的內容均會攜帶模型識別（modelTag），標註本次實際提供服務的模型。你的輸入僅用於當次生成，轉發服務不留存對話內容，我們不會將你的內容用於模型訓練或使用者畫像。請勿上傳或輸入身分證字號、銀行卡號、醫療紀錄等敏感個人資訊。</p>
+<h2 data-lang="zh-Hant">四、提煉點與計費</h2>
+<p data-lang="zh-Hant">本 App 採用「提煉點＋呼叫次數」模式：每蒸餾一本書按有效字數消耗提煉點（約每 30 萬字消耗 1 點，單本 1–10 點），問答／產出／陪練等按呼叫次數計。免費使用者每月享有一定提煉點與呼叫次數；你可透過訂閱 Pro 或購買加購包取得更多額度。所有付費均透過 App Store 內購（IAP）完成，由 Apple 處理支付，本 App 不收集你的支付資訊。</p>
+<h2 data-lang="zh-Hant">五、本地儲存與 iCloud 同步</h2>
+<p data-lang="zh-Hant">你的書、技能包、問答紀錄與偏好設定透過 Apple CloudKit/SwiftData 同步至你的個人 iCloud 帳戶，受你的 Apple ID 安全機制保護。若你關閉 iCloud 同步，資料僅保存在本裝置。</p>
+<h2 data-lang="zh-Hant">六、本地通知</h2>
+<p data-lang="zh-Hant">任務提醒、蒸餾完成通知等在裝置本地觸發，不因此上傳任何資料。你可隨時在系統設定中關閉通知權限。</p>
+<h2 data-lang="zh-Hant">七、廣告與追蹤</h2>
+<p data-lang="zh-Hant">本 App 不含第三方廣告，不申請廣告識別碼（IDFA），不進行跨 App 或跨網站追蹤。</p>
+<h2 data-lang="zh-Hant">八、兒童隱私</h2>
+<p data-lang="zh-Hant">本 App 面向成年使用者，不面向 13 歲以下兒童提供服務，亦不有意收集兒童的個人資訊。若你為監護人並發現相關情況，請透過文末聯絡方式與我們聯絡。</p>
+<h2 data-lang="zh-Hant">九、刪除你的資料</h2>
+<p data-lang="zh-Hant">你可以隨時刪除單本書籍（書籍詳情頁 → 刪除書籍），或清除全部資料（設定 → 清除 iCloud 資料）；刪除 App 後，也可在系統設定中選擇刪除來自 iCloud 的資料。刪除後相關資料不可復原。</p>
+<h2 data-lang="zh-Hant">十、政策更新</h2>
+<p data-lang="zh-Hant">我們可能不時更新本政策。重大變更將展示於本頁面，更新後的生效日期以頁面頂部為準。</p>
+<h2 data-lang="zh-Hant">十一、聯絡我們</h2>
+<p data-lang="zh-Hant">如對本政策有任何疑問，請郵件聯絡：<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
+
+<!-- ja -->
+<h1 data-lang="ja">ReadAct · プライバシーポリシー</h1>
+<p class="meta" data-lang="ja">発効日：2026年9月2日</p>
+<p data-lang="ja">ReadAct（青迹・知行、以下「本アプリ」）へようこそ。本アプリは「読んだ本を使えるスキルに変える」読書活用ツールです。あなたが適法に保有する書籍・長文書をアップロードすると、AI がそれを構造化されたスキルパック（枠組み・原則・方法・反例・用語・意思決定ルール、および問題マップ）に蒸留し、プロデュース・コーチ・タスク・Q&amp;A などのモードで実シーンに応用できます。生成物にはすべて引用の出所が付きます。本アプリは匿名で利用でき、アカウント制度はありません。私たちはあなたのプライバシーを重視しており、本ポリシーはデータの収集・利用・保護について説明します。</p>
+<h2 data-lang="ja">1. 収集する情報</h2>
+<p data-lang="ja"><strong>コンテンツデータ</strong>：あなたがアップロードした書籍・文書の原文は、デバイス内と個人の iCloud（CloudKit/SwiftData による同期）にのみ保存され、ローカルでの表示・蒸留・Q&amp;A に使用されます。後述の「AI 処理」で説明する必要なテキストチャンクを除き、自社サーバーにアップロードされることはなく、広告利用もされません。<br>
+<strong>利用データ</strong>：本アプリは行動分析を収集せず、統計レポートも広告トラッキングも行いません。割当（クォータ）管理のため、デバイスで生成される匿名識別子に関連付けた蒸留・呼び出し回数とトークン量を記録します。この記録にはあなたのコンテンツは一切含まれず、個人を特定することもできません。</p>
+<h2 data-lang="ja">2. 匿名利用とクォータ</h2>
+<p data-lang="ja">本アプリは登録不要で、氏名・電話番号・メールアドレスなどの個人識別情報を強制的に収集しません。無料枠・Pro サブスクリプション・アドオン購入を提供するため、本アプリとバックエンドはデバイス生成の匿名識別子でクォータを計測します。いつでもアプリのデータを消去またはアプリを削除でき、それに伴いクォータ記録は失効します。</p>
+<h2 data-lang="ja">3. AI 処理と第三者サービス</h2>
+<p data-lang="ja">蒸留・Q&amp;A・コーチ・プロデュースなどの AI 機能は、第三者の大規模言語モデルプロバイダーによって提供されます。これらの機能を利用する際、私たちは解析済みの必要なテキストチャンクを、展開しているリレーサービス（readact.shxlab.com）経由で第三者 LLM プロバイダーに送信し、応答を生成します。現在連携しているモデルには DeepSeek が含まれます（蒸留は既定で DeepSeek-V4-Pro に固定。Q&amp;A・プロデュース等は可用性とコストに応じて DeepSeek・Qwen・Zhipu GLM 間でルーティング）。各 AI 生成応答には、実際にサービスを提供したモデルを示す modelTag が付与されます。入力はその回の応答生成のみに使用され、リレーサービスは会話内容を保持せず、モデルトレーニングやプロファイリングに利用することもありません。身分証番号・銀行口座番号・医療記録などの機微な個人情報をアップロード・入力しないでください。</p>
+<h2 data-lang="ja">4. 蒸留ポイントと課金</h2>
+<p data-lang="ja">本アプリは「蒸留ポイント＋呼び出し回数」方式です。書籍 1 冊の蒸留には有効文字数に応じたポイントを消費し（約 30 万字につき 1 ポイント、1 冊あたり 1〜10 ポイント）、Q&amp;A・プロデュース・コーチは呼び出し回数として計上されます。無料ユーザーには毎月一定のポイントと呼び出し回数が付与され、Pro へのサブスクリプションまたはアドオン購入で追加できます。支払いはすべて Apple による App Store のアプリ内課金（IAP）で処理され、本アプリが支払い情報を収集することはありません。</p>
+<h2 data-lang="ja">5. ローカル保存と iCloud 同期</h2>
+<p data-lang="ja">書籍・スキルパック・Q&amp;A 履歴・設定は、Apple CloudKit/SwiftData を介して個人の iCloud アカウントに同期され、Apple ID のセキュリティによって保護されます。iCloud 同期をオフにすると、データはこのデバイスにのみ保存されます。</p>
+<h2 data-lang="ja">6. ローカル通知</h2>
+<p data-lang="ja">タスクのリマインダーや蒸留完了通知はデバイス上でローカルに発火し、データをアップロードしません。システム設定でいつでも通知権限を無効化できます。</p>
+<h2 data-lang="ja">7. 広告とトラッキング</h2>
+<p data-lang="ja">本アプリには第三者広告は含まれず、広告識別子（IDFA）も取得せず、アプリ横断・サイト横断のトラッキングも行いません。</p>
+<h2 data-lang="ja">8. 子どものプライバシー</h2>
+<p data-lang="ja">本アプリは成人ユーザー向けであり、13 歳未満の子どもを対象とせず、子どもの個人情報を意図的に収集することもありません。保護者で関連する事実をお気づきの場合は、末尾の連絡先までご連絡ください。</p>
+<h2 data-lang="ja">9. データの削除</h2>
+<p data-lang="ja">個別の書籍はいつでも削除できます（書籍詳細 → 書籍を削除）。全データを消去するには（設定 → iCloud データを消去）を実行します。アプリ削除後は、システム設定で「iCloud からデータを削除」も選択できます。削除されたデータは復元できません。</p>
+<h2 data-lang="ja">10. 本ポリシーの変更</h2>
+<p data-lang="ja">本ポリシーは随時更新されることがあります。重要な変更はこのページに掲載され、ページ上部の発効日が適用されます。</p>
+<h2 data-lang="ja">11. お問い合わせ</h2>
+<p data-lang="ja">本ポリシーについてご質問がある場合は、<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールでご連絡ください。</p>
+
+<script>
+const supported = ['zh-Hans','en','zh-Hant','ja'];
+
+function showLang(lang) {
+    if (!supported.includes(lang)) lang = 'en';
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    supported.forEach(l => {
+        const btn = document.getElementById('btn-' + l.replace('zh-Hans','zh'));
+        if (btn) btn.classList.toggle('active', l === lang);
+    });
+    document.documentElement.lang = lang;
+}
+
+function switchLang(lang) {
+    showLang(lang);
+    try { localStorage.setItem('readact-privacy-lang', lang); } catch(e) {}
+}
+
+function detectLang() {
+    try {
+        const stored = localStorage.getItem('readact-privacy-lang');
+        if (stored && supported.includes(stored)) return stored;
+    } catch(e) {}
+    const nav = (navigator.language || '').split('-');
+    if (supported.includes(nav.join('-'))) return nav.join('-');
+    if (nav[0] === 'zh') {
+        const region = (navigator.language || '').toLowerCase();
+        return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
+    }
+    if (supported.includes(nav[0])) return nav[0];
+    return 'en';
+}
+
+showLang(detectLang());
+</script>
+
+</body>
+</html>

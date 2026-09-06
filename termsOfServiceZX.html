@@ -1,138 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="zh-Hans" data-page-node-id="7EYfM7SpoZSauXStaADeEK">
+<head data-page-node-id="UVJYBnPrN0vK7xu426WH9i">
+    <meta charset="UTF-8" data-page-node-id="9wlZe3KqDNsYgIGBcChlnP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="RPzqZF0ZULqDU3PKLChlM2">
     <title>用户协议 — 青迹·知行</title>
     <style>
-        :root { color-scheme: light dark; --bg: #F8F9FA; --text: #111827; --heading: #111827; --sub: #6B7280; --link: #2563EB; --h2: #2563EB; --btn-bg: #FFFFFF; --btn-border: #D1D5DB; --btn-text: #111827; --btn-active-text: #FFFFFF; }
-        :root[data-theme="dark"] { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
-        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
-        h2 { font-size: 18px; margin-top: 28px; color: var(--h2); }
-        .meta { color: var(--sub); font-size: 14px; margin-bottom: 24px; }
-        a { color: var(--link); }
-        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-bar button { background: var(--btn-bg); border: 1px solid var(--btn-border); border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--btn-text); }
-        .lang-bar button.active { background: var(--link); color: var(--btn-active-text); border-color: var(--link); }
+        /* 主题色板：与 ReadAct App ColorToken 同步（DESIGN_SPEC §2.1）
+           浅色 = 暖纸 · 青墨   深色 = 暖炭夜 · 浅青墨 */
+        :root {
+            color-scheme: light dark;
+            --bg: #F3F0E8;
+            --bg-deep: #ECE6DA;
+            --card: #FCFBF6;
+            --text: #24211A;
+            --heading: #24211A;
+            --sub: #5B5549;
+            --hint: #968E7F;
+            --link: #1F5E56;
+            --h2: #1F5E56;
+            --line: #E4DDCE;
+            --line-strong: #D3CAB8;
+            --accent-soft: #E3ECE7;
+            --seal: #A8422C;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+            --btn-bg: #1F5E56;
+            --btn-text: #F3F0E8;
+            --btn-border: #1F5E56;
+            --btn-active-bg: #FCFBF6;
+            --btn-active-text: #1F5E56;
+        }
         @media (prefers-color-scheme: dark) {
-            :root:not([data-theme]) { --bg: #0B0E14; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+            :root:not([data-theme]) {
+                --bg: #1A1712;
+                --bg-deep: #211D16;
+                --card: #25211A;
+                --text: #EAE5DA;
+                --heading: #EAE5DA;
+                --sub: #A9A294;
+                --hint: #8A8274;
+                --link: #94C5B6;
+                --h2: #94C5B6;
+                --line: #3D382D;
+                --line-strong: #4B4437;
+                --accent-soft: #1D2C27;
+                --seal: #E08E75;
+                --shadow: 0 1px 3px rgba(0,0,0,0.4);
+                --btn-bg: #94C5B6;
+                --btn-text: #1A1712;
+                --btn-border: #94C5B6;
+                --btn-active-bg: #25211A;
+                --btn-active-text: #94C5B6;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', 'Noto Sans CJK SC', 'Helvetica Neue', sans-serif;
+            max-width: 680px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: var(--text);
+            line-height: 1.8;
+            background: var(--bg);
+        }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); font-weight: 600; letter-spacing: 0.5px; }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 26px 0 8px;
+            padding-left: 10px;
+            border-left: 3px solid var(--h2);
+            color: var(--h2);
+        }
+        p { margin: 10px 0; font-size: 15px; }
+        .meta { color: var(--hint); font-size: 14px; margin-bottom: 24px; }
+        a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--line); }
+        a:hover { border-bottom-color: var(--link); }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button {
+            background: var(--btn-active-bg);
+            border: 1px solid var(--btn-border);
+            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--btn-active-text);
+        }
+        .lang-bar button.active {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            border-color: var(--btn-bg);
         }
         [data-lang] { display: none; }
         [data-lang].show { display: revert; }
     </style>
 </head>
-<body>
+<body data-page-node-id="Lk4a20XpMRUGvdoBM2jzgX">
 
-<div class="lang-bar">
-    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
-    <button onclick="switchLang('en')" id="btn-en">English</button>
-    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
-    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+<div class="lang-bar" data-page-node-id="gZvhsKHDfy8cxHHAOHmevR">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh" data-page-node-id="XTBNZlR3NulcCnDHaydfJx">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en" data-page-node-id="uVz4Xz3gHglnnPXqCcFVAq">English</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant" data-page-node-id="ZOX44hrRJBqEAHfzXbblEd">繁體中文</button>
 </div>
 
 <!-- zh-Hans -->
-<h1 data-lang="zh-Hans">青迹·知行 · 用户协议</h1>
-<p class="meta" data-lang="zh-Hans">生效日期：2026 年 9 月 2 日</p>
-<p data-lang="zh-Hans">欢迎使用青迹·知行（英文名 ReadAct，以下简称「本 App」）。本 App 帮助你把自己合法持有的书/长文档蒸馏为结构化方法库（框架、原则、方法、反例、术语、决策规则与问题地图），并通过产出、陪练、任务、问答等模式，把书中的方法论应用于真实场景。使用本 App 即表示你同意本用户协议的全部条款。如你不同意，请勿使用本 App。</p>
-<h2 data-lang="zh-Hans">一、服务说明</h2>
-<p data-lang="zh-Hans">本 App 是一款「从读到用」的 AI 阅读转化工具。你上传自己合法持有、有权使用的书/文档后，AI 会将其解析并蒸馏为结构化的技能包与方法库；你可以基于单本书或文档，通过产出（模板/清单/话术/行动计划）、陪练（AI 教练对话）、任务（步骤清单与提醒）、问答（带引用溯源）等模式，把方法应用到真实场景。蒸馏与模式调用由第三方 AI 服务（以 DeepSeek 为主，详见隐私政策）提供，AI 生成内容仅供参考，不构成任何专业建议。</p>
-<h2 data-lang="zh-Hans">二、账户与数据</h2>
-<p data-lang="zh-Hans">本 App 不要求注册账号，以匿名方式使用。你的书、方法库、问答记录与偏好设置保存在设备本地，并通过你的 Apple iCloud（如启用）进行同步。你对自己的数据负责，请妥善保管设备与 Apple ID 安全，并自行留存重要资料。</p>
-<h2 data-lang="zh-Hans">三、内容与版权</h2>
-<p data-lang="zh-Hans">你仅允许上传自己合法持有、有权使用的内容（如你购买、获授权或依法可使用的电子书与文档）。请勿上传侵权、违法或违背第三方权益的内容。因你上传内容引发的侵权责任由你自行承担。本 App 对生成内容中的原文引用设置限制（单条引用不超过 150 字、单书累计引用比例不超过全书 15%），以尊重原书版权。</p>
-<h2 data-lang="zh-Hans">四、提炼点、订阅与内购</h2>
-<p data-lang="zh-Hans">本 App 采用「提炼点 + 调用次数」的配额模式，免费用户每月享有一定提炼点与调用次数。你可以通过订阅 Pro 或购买加购包获取更多额度。订阅为自动续费订阅，通过 App Store（Apple）渠道完成，受 Apple 相关条款约束；你可在系统设置中随时查看、管理或关闭自动续费。数字内容与点数服务一经消耗不支持退款，除非法律或 Apple 另有规定。各档位、价格与权益以 App 内及 App Store 实际展示为准。</p>
-<h2 data-lang="zh-Hans">五、AI 生成内容的使用与限制</h2>
-<p data-lang="zh-Hans">AI 生成的蒸馏结果、问答、建议等内容基于大语言模型，可能存在不准确、不完整或不适用的情形，不构成法律、医疗、财务等专业意见。你应自行判断并承担使用 AI 内容及据此行动的后果。请勿利用 AI 功能生成或上传违法、侵权、色情、暴力或危害他人权益的内容。</p>
-<h2 data-lang="zh-Hans">六、禁止行为</h2>
-<p data-lang="zh-Hans">你不得：1) 对本 App 进行反向工程、破解或绕过任何技术保护措施；2) 利用本 App 从事任何违法活动；3) 干扰、破坏本 App 或后端服务的正常运行；4) 滥用 AI 功能进行批量生成、规避配额限制或影响服务稳定性。</p>
-<h2 data-lang="zh-Hans">七、免责声明</h2>
-<p data-lang="zh-Hans">本 App 按「现状」提供，不提供任何明示或暗示的担保，包括但不限于适销性、特定用途适用性。因使用本 App、依赖 AI 内容或数据丢失造成的任何直接或间接损失，开发者在法律允许的范围内不承担责任。</p>
-<h2 data-lang="zh-Hans">八、服务的变更与终止</h2>
-<p data-lang="zh-Hans">我们可能随时更新、调整、暂停或终止本 App 的全部或部分功能与配额规则。重大变更将提前在本页面或 App 内公告。你亦可随时停止使用并删除本 App 及你的数据。</p>
-<h2 data-lang="zh-Hans">九、协议变更</h2>
-<p data-lang="zh-Hans">我们可能不时更新本协议。更新后的协议将展示于本页面；重大变更会通过 App 内提示或本页公告告知。你继续使用本 App 即视为接受更新后的条款。</p>
-<h2 data-lang="zh-Hans">十、联系我们</h2>
-<p data-lang="zh-Hans">如有任何问题或反馈，请邮件联系：<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
+<h1 data-lang="zh-Hans" data-page-node-id="1RGmfWe2vipgimNsyMqeGQ">青迹·知行 · 用户协议</h1>
+<p class="meta" data-lang="zh-Hans" data-page-node-id="gbJg8VmyxGbPIitu6KZK95">生效日期：2026 年 9 月 2 日</p>
+<p data-lang="zh-Hans" data-page-node-id="xbtyTnTKPVdjQDQeqUbvem">欢迎使用青迹·知行（英文名 ReadAct，以下简称「本 App」）。本 App 帮助你把自己合法持有的书/长文档蒸馏为结构化方法库（框架、原则、方法、反例、术语、决策规则与问题地图），并通过产出、陪练、任务、问答等模式，把书中的方法论应用于真实场景。使用本 App 即表示你同意本用户协议的全部条款。如你不同意，请勿使用本 App。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="vrw2E1XniguL5hleEgckWV">一、服务说明</h2>
+<p data-lang="zh-Hans" data-page-node-id="p63gDRBCi4nv1JAnEpIE6E">本 App 是一款「从读到用」的 AI 阅读转化工具。你上传自己合法持有、有权使用的书/文档后，AI 会将其解析并蒸馏为结构化的技能包与方法库；你可以基于单本书或文档，通过产出（模板/清单/话术/行动计划）、陪练（AI 教练对话）、任务（步骤清单与提醒）、问答（带引用溯源）等模式，把方法应用到真实场景。蒸馏与模式调用由第三方 AI 服务（以 DeepSeek 为主，详见隐私政策）提供，AI 生成内容仅供参考，不构成任何专业建议。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="B5tjcSUUv4SxbBBuLHIEOq">二、账户与数据</h2>
+<p data-lang="zh-Hans" data-page-node-id="DC2lKUMRIkdqyi3bOnnFfn">本 App 不要求注册账号，以匿名方式使用。你的书、方法库、问答记录与偏好设置保存在设备本地，并通过你的 Apple iCloud（如启用）进行同步。你对自己的数据负责，请妥善保管设备与 Apple ID 安全，并自行留存重要资料。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="1woFLf2moYLy66HA4qoea6">三、内容与版权</h2>
+<p data-lang="zh-Hans" data-page-node-id="kiF9nc2zcCl4Nhr0fMOutC">你仅允许上传自己合法持有、有权使用的内容（如你购买、获授权或依法可使用的电子书与文档）。请勿上传侵权、违法或违背第三方权益的内容。因你上传内容引发的侵权责任由你自行承担。本 App 对生成内容中的原文引用设置限制（单条引用不超过 150 字、单书累计引用比例不超过全书 15%），以尊重原书版权。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="MXCCV1iL9LqapOh1tbxKDv">四、提炼点、订阅与内购</h2>
+<p data-lang="zh-Hans" data-page-node-id="mxgMNZoFUcJaPMleVwvePu">本 App 采用「提炼点 + 调用次数」的配额模式，免费用户每月享有一定提炼点与调用次数。你可以通过订阅 Pro 或购买加购包获取更多额度。订阅为自动续费订阅，通过 App Store（Apple）渠道完成，受 Apple 相关条款约束；你可在系统设置中随时查看、管理或关闭自动续费。数字内容与点数服务一经消耗不支持退款，除非法律或 Apple 另有规定。各档位、价格与权益以 App 内及 App Store 实际展示为准。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="mnDABUHYtHH6gxFimFOhuw">五、AI 生成内容的使用与限制</h2>
+<p data-lang="zh-Hans" data-page-node-id="wawwxHqDw3xb3ekIn40qiS">AI 生成的蒸馏结果、问答、建议等内容基于大语言模型，可能存在不准确、不完整或不适用的情形，不构成法律、医疗、财务等专业意见。你应自行判断并承担使用 AI 内容及据此行动的后果。请勿利用 AI 功能生成或上传违法、侵权、色情、暴力或危害他人权益的内容。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="MvDuzBHztra1DnygIgFRa7">六、禁止行为</h2>
+<p data-lang="zh-Hans" data-page-node-id="B7OwiovL9bZIgEb95qzci2">你不得：1) 对本 App 进行反向工程、破解或绕过任何技术保护措施；2) 利用本 App 从事任何违法活动；3) 干扰、破坏本 App 或后端服务的正常运行；4) 滥用 AI 功能进行批量生成、规避配额限制或影响服务稳定性。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="hkDngutG1oVfyBRfB1Glj4">七、免责声明</h2>
+<p data-lang="zh-Hans" data-page-node-id="P9D4wDXODAPTdLmGoGbCqh">本 App 按「现状」提供，不提供任何明示或暗示的担保，包括但不限于适销性、特定用途适用性。因使用本 App、依赖 AI 内容或数据丢失造成的任何直接或间接损失，开发者在法律允许的范围内不承担责任。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="urIOaCygaZuJEtxCiPj1iC">八、服务的变更与终止</h2>
+<p data-lang="zh-Hans" data-page-node-id="RPuLNhK9yMZcDKrGfuBSJU">我们可能随时更新、调整、暂停或终止本 App 的全部或部分功能与配额规则。重大变更将提前在本页面或 App 内公告。你亦可随时停止使用并删除本 App 及你的数据。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="EcxF0xkyX0nh9FpA4XOvxP">九、协议变更</h2>
+<p data-lang="zh-Hans" data-page-node-id="R0nwxRdhGjyTSsOkForMyJ">我们可能不时更新本协议。更新后的协议将展示于本页面；重大变更会通过 App 内提示或本页公告告知。你继续使用本 App 即视为接受更新后的条款。</p>
+<h2 data-lang="zh-Hans" data-page-node-id="ClbMYvMkCa45fnbju2HWTy">十、联系我们</h2>
+<p data-lang="zh-Hans" data-page-node-id="39nJLSKYMKJgKGCe0vwBPx">如有任何问题或反馈，请邮件联系：<a href="mailto:mygrowthlife@gmail.com" data-page-node-id="zpHJbDwiwodHOqpY2zbiB8">mygrowthlife@gmail.com</a></p>
 
 <!-- en -->
-<h1 data-lang="en">ReadAct · Terms of Service</h1>
-<p class="meta" data-lang="en">Effective Date: September 2, 2026</p>
-<p data-lang="en">Welcome to ReadAct ("QingJi·ZhiXing / 青迹·知行", hereinafter "the App"). The App helps you distill books or long-form documents that you lawfully own into structured methodology libraries (frameworks, principles, methods, counter-examples, terminology, decision rules, and a question map), then apply the methodology to real scenarios through Produce, Coach, Task, and Q&amp;A modes. By using the App, you agree to all terms of this User Agreement. If you do not agree, please do not use the App.</p>
-<h2 data-lang="en">1. Service Description</h2>
-<p data-lang="en">The App is a reading-to-application AI tool. After you upload books/documents that you lawfully own and have the right to use, AI parses and distills them into structured skill packs and methodology libraries. You can then apply the methods to real scenarios per book/document through Produce (templates/checklists/scripts/action plans), Coach (AI coach conversation), Task (step checklists with reminders), and Q&amp;A (with citation traceability) modes. Distillation and mode calls are powered by third-party AI services (primarily DeepSeek; see the Privacy Policy). AI-generated content is for reference only and does not constitute professional advice.</p>
-<h2 data-lang="en">2. Account &amp; Data</h2>
-<p data-lang="en">The App requires no registration and is used anonymously. Your books, methodology libraries, Q&amp;A history, and preferences are stored locally on your device and synced through your Apple iCloud (if enabled). You are responsible for your own data; please protect your device and Apple ID, and keep important materials backed up.</p>
-<h2 data-lang="en">3. Content &amp; Copyright</h2>
-<p data-lang="en">You may only upload content that you lawfully own and have the right to use (such as ebooks and documents you purchased, are licensed to use, or may legally use). Do not upload infringing, illegal, or third-party-rights-violating content. You are solely responsible for any liability arising from content you upload. To respect original copyrights, the App limits verbatim quotation from source works (each citation no more than 150 characters, and cumulative quoted excerpts per book no more than 15% of the book).</p>
-<h2 data-lang="en">4. Distill Points, Subscription &amp; In-App Purchases</h2>
-<p data-lang="en">The App uses a "distill points + calls" quota model; free users receive a monthly allowance of points and calls. You can obtain more by subscribing to Pro or purchasing add-on packs. Subscriptions are auto-renewing and processed through the App Store (Apple), subject to Apple's terms; you can view, manage, or turn off auto-renewal at any time in System Settings. Digital content and points, once consumed, are non-refundable unless otherwise required by law or Apple. Tiers, prices, and benefits are subject to what is shown in the App and the App Store.</p>
-<h2 data-lang="en">5. Use &amp; Limits of AI-Generated Content</h2>
-<p data-lang="en">AI-generated distillation results, Q&amp;A, and suggestions are based on large language models and may be inaccurate, incomplete, or unsuitable. They do not constitute legal, medical, financial, or other professional advice. You should exercise your own judgment and bear the consequences of using AI content and acting on it. Do not use AI features to generate or upload illegal, infringing, pornographic, violent, or harmful content.</p>
-<h2 data-lang="en">6. Prohibited Conduct</h2>
-<p data-lang="en">You must not: 1) reverse engineer, crack, or circumvent any technical protection of the App; 2) use the App for any illegal activity; 3) interfere with or disrupt the normal operation of the App or backend services; 4) abuse AI features for bulk generation, to circumvent quota limits, or to impair service stability.</p>
-<h2 data-lang="en">7. Disclaimer</h2>
-<p data-lang="en">The App is provided "as is" without any express or implied warranties, including but not limited to merchantability and fitness for a particular purpose. To the extent permitted by law, the developer shall not be liable for any direct or indirect loss caused by the use of the App, reliance on AI content, or data loss.</p>
-<h2 data-lang="en">8. Changes &amp; Termination of Service</h2>
-<p data-lang="en">We may update, adjust, suspend, or terminate all or part of the App's features and quota rules at any time. Material changes will be announced on this page or in the App in advance. You may stop using the App and delete the App and your data at any time.</p>
-<h2 data-lang="en">9. Changes to This Agreement</h2>
-<p data-lang="en">We may update this Agreement from time to time. The updated version will be posted on this page; material changes will be notified via in-app notices or announcements on this page. Your continued use of the App constitutes acceptance of the updated terms.</p>
-<h2 data-lang="en">10. Contact Us</h2>
-<p data-lang="en">For any questions or feedback, please contact: <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
+<h1 data-lang="en" data-page-node-id="3h460pGudn6tQpF4XNtnAT">ReadAct · Terms of Service</h1>
+<p class="meta" data-lang="en" data-page-node-id="OU4gonKz8aP4oMGRxz6XT8">Effective Date: September 2, 2026</p>
+<p data-lang="en" data-page-node-id="Dcw43LQ38DwFGvLbQIxi4Y">Welcome to ReadAct ("QingJi·ZhiXing / 青迹·知行", hereinafter "the App"). The App helps you distill books or long-form documents that you lawfully own into structured methodology libraries (frameworks, principles, methods, counter-examples, terminology, decision rules, and a question map), then apply the methodology to real scenarios through Produce, Coach, Task, and Q&amp;A modes. By using the App, you agree to all terms of this User Agreement. If you do not agree, please do not use the App.</p>
+<h2 data-lang="en" data-page-node-id="pY17oT0XDnv1rgiAAxqFjB">1. Service Description</h2>
+<p data-lang="en" data-page-node-id="fm6ppwjwlyKFUYpdyI4A5j">The App is a reading-to-application AI tool. After you upload books/documents that you lawfully own and have the right to use, AI parses and distills them into structured skill packs and methodology libraries. You can then apply the methods to real scenarios per book/document through Produce (templates/checklists/scripts/action plans), Coach (AI coach conversation), Task (step checklists with reminders), and Q&amp;A (with citation traceability) modes. Distillation and mode calls are powered by third-party AI services (primarily DeepSeek; see the Privacy Policy). AI-generated content is for reference only and does not constitute professional advice.</p>
+<h2 data-lang="en" data-page-node-id="fonDtSlTTsRPqfxtJHRqO3">2. Account &amp; Data</h2>
+<p data-lang="en" data-page-node-id="tXKULmH8GznzpGG1TJklY5">The App requires no registration and is used anonymously. Your books, methodology libraries, Q&amp;A history, and preferences are stored locally on your device and synced through your Apple iCloud (if enabled). You are responsible for your own data; please protect your device and Apple ID, and keep important materials backed up.</p>
+<h2 data-lang="en" data-page-node-id="9eI4fUErdJvKwoACbvyMON">3. Content &amp; Copyright</h2>
+<p data-lang="en" data-page-node-id="UsfcxyqtYI0HDQYis1FwzW">You may only upload content that you lawfully own and have the right to use (such as ebooks and documents you purchased, are licensed to use, or may legally use). Do not upload infringing, illegal, or third-party-rights-violating content. You are solely responsible for any liability arising from content you upload. To respect original copyrights, the App limits verbatim quotation from source works (each citation no more than 150 characters, and cumulative quoted excerpts per book no more than 15% of the book).</p>
+<h2 data-lang="en" data-page-node-id="NTAezvQtpa6PbxOa2tKOv3">4. Distill Points, Subscription &amp; In-App Purchases</h2>
+<p data-lang="en" data-page-node-id="F55HTzCyOCuqUfU66siIpJ">The App uses a "distill points + calls" quota model; free users receive a monthly allowance of points and calls. You can obtain more by subscribing to Pro or purchasing add-on packs. Subscriptions are auto-renewing and processed through the App Store (Apple), subject to Apple's terms; you can view, manage, or turn off auto-renewal at any time in System Settings. Digital content and points, once consumed, are non-refundable unless otherwise required by law or Apple. Tiers, prices, and benefits are subject to what is shown in the App and the App Store.</p>
+<h2 data-lang="en" data-page-node-id="Hc5YmSYN5Fe8Y7MP4PoyHa">5. Use &amp; Limits of AI-Generated Content</h2>
+<p data-lang="en" data-page-node-id="ZGjMPqNLC1jjrDcQZjomUa">AI-generated distillation results, Q&amp;A, and suggestions are based on large language models and may be inaccurate, incomplete, or unsuitable. They do not constitute legal, medical, financial, or other professional advice. You should exercise your own judgment and bear the consequences of using AI content and acting on it. Do not use AI features to generate or upload illegal, infringing, pornographic, violent, or harmful content.</p>
+<h2 data-lang="en" data-page-node-id="EA9vD3xg0mXDLgFoTaLgsF">6. Prohibited Conduct</h2>
+<p data-lang="en" data-page-node-id="cPfdp1uUqNgw2EvVDm72gp">You must not: 1) reverse engineer, crack, or circumvent any technical protection of the App; 2) use the App for any illegal activity; 3) interfere with or disrupt the normal operation of the App or backend services; 4) abuse AI features for bulk generation, to circumvent quota limits, or to impair service stability.</p>
+<h2 data-lang="en" data-page-node-id="iHDL2Okw8aAFMZYvSvGz3x">7. Disclaimer</h2>
+<p data-lang="en" data-page-node-id="L4exTBLOrro53bC2OsmBmT">The App is provided "as is" without any express or implied warranties, including but not limited to merchantability and fitness for a particular purpose. To the extent permitted by law, the developer shall not be liable for any direct or indirect loss caused by the use of the App, reliance on AI content, or data loss.</p>
+<h2 data-lang="en" data-page-node-id="DAYhB74mHNu4NBBKU3Cftr">8. Changes &amp; Termination of Service</h2>
+<p data-lang="en" data-page-node-id="VMRF7zGvZggrciumNjl50N">We may update, adjust, suspend, or terminate all or part of the App's features and quota rules at any time. Material changes will be announced on this page or in the App in advance. You may stop using the App and delete the App and your data at any time.</p>
+<h2 data-lang="en" data-page-node-id="qg2156BLTGkEkgYGmFGP6h">9. Changes to This Agreement</h2>
+<p data-lang="en" data-page-node-id="HhY52i1HCsbDkrGLaR0hDy">We may update this Agreement from time to time. The updated version will be posted on this page; material changes will be notified via in-app notices or announcements on this page. Your continued use of the App constitutes acceptance of the updated terms.</p>
+<h2 data-lang="en" data-page-node-id="TpZrJFy8VM6tB8pJzFWH5z">10. Contact Us</h2>
+<p data-lang="en" data-page-node-id="D43gmriPdCuR4nmdThSyxU">For any questions or feedback, please contact: <a href="mailto:mygrowthlife@gmail.com" data-page-node-id="xD1MZF2AVPwcxBAsMfM0mO">mygrowthlife@gmail.com</a></p>
 
 <!-- zh-Hant -->
-<h1 data-lang="zh-Hant">青跡·知行 · 用戶協議</h1>
-<p class="meta" data-lang="zh-Hant">生效日期：2026 年 9 月 2 日</p>
-<p data-lang="zh-Hant">歡迎使用青跡·知行（英文名 ReadAct，以下簡稱「本 App」）。本 App 幫助你把自己合法持有的書／長文件蒸餾為結構化方法庫（框架、原則、方法、反例、術語、決策規則與問題地圖），並透過產出、陪練、任務、問答等模式，把書中的方法論應用於真實場景。使用本 App 即表示你同意本用戶協議的全部條款。如你不同意，請勿使用本 App。</p>
-<h2 data-lang="zh-Hant">一、服務說明</h2>
-<p data-lang="zh-Hant">本 App 是一款「從讀到用」的 AI 閱讀轉化工具。你上傳自己合法持有、有權使用的書／文件後，AI 會將其解析並蒸餾為結構化的技能包與方法庫；你可以基於單本書或文件，透過產出（範本／清單／話術／行動計畫）、陪練（AI 教練對話）、任務（步驟清單與提醒）、問答（帶引用溯源）等模式，把方法應用到真實場景。蒸餾與模式呼叫由第三方 AI 服務（以 DeepSeek 為主，詳見隱私政策）提供，AI 生成內容僅供參考，不構成任何專業建議。</p>
-<h2 data-lang="zh-Hant">二、帳戶與資料</h2>
-<p data-lang="zh-Hant">本 App 不要求註冊帳號，以匿名方式使用。你的書、方法庫、問答紀錄與偏好設定保存在裝置本地，並透過你的 Apple iCloud（如啟用）進行同步。你對自己的資料負責，請妥善保管裝置與 Apple ID 安全，並自行留存重要資料。</p>
-<h2 data-lang="zh-Hant">三、內容與版權</h2>
-<p data-lang="zh-Hant">你僅允許上傳自己合法持有、有權使用的內容（如你購買、獲授權或依法可使用的電子書與文件）。請勿上傳侵權、違法或違背第三方權益的內容。因你上傳內容引發的侵權責任由你自行承擔。本 App 對生成內容中的原文引用設置限制（單條引用不超過 150 字、單書累計引用比例不超過全書 15%），以尊重原書版權。</p>
-<h2 data-lang="zh-Hant">四、提煉點、訂閱與內購</h2>
-<p data-lang="zh-Hant">本 App 採用「提煉點＋呼叫次數」的配額模式，免費使用者每月享有一定提煉點與呼叫次數。你可以透過訂閱 Pro 或購買加購包取得更多額度。訂閱為自動續費訂閱，透過 App Store（Apple）管道完成，受 Apple 相關條款約束；你可在系統設定中隨時查看、管理或關閉自動續費。數位內容與點數服務一經消耗不支援退款，除非法律或 Apple 另有規定。各檔位、價格與權益以 App 內及 App Store 實際展示為準。</p>
-<h2 data-lang="zh-Hant">五、AI 生成內容的使用與限制</h2>
-<p data-lang="zh-Hant">AI 生成的蒸餾結果、問答、建議等內容基於大型語言模型，可能存在不準確、不完整或不適用的情形，不構成法律、醫療、財務等專業意見。你應自行判斷並承擔使用 AI 內容及據此行動的後果。請勿利用 AI 功能生成或上傳違法、侵權、色情、暴力或危害他人權益的內容。</p>
-<h2 data-lang="zh-Hant">六、禁止行為</h2>
-<p data-lang="zh-Hant">你不得：1) 對本 App 進行反向工程、破解或繞過任何技術保護措施；2) 利用本 App 從事任何違法活動；3) 干擾、破壞本 App 或後端服務的正常運行；4) 濫用 AI 功能進行批次生成、規避配額限制或影響服務穩定性。</p>
-<h2 data-lang="zh-Hant">七、免責聲明</h2>
-<p data-lang="zh-Hant">本 App 按「現狀」提供，不提供任何明示或暗示的擔保，包括但不限於適銷性、特定用途適用性。因使用本 App、依賴 AI 內容或資料遺失造成的任何直接或間接損失，開發者在法律允許的範圍內不承擔責任。</p>
-<h2 data-lang="zh-Hant">八、服務的變更與終止</h2>
-<p data-lang="zh-Hant">我們可能隨時更新、調整、暫停或終止本 App 的全部或部分功能與配額規則。重大變更將提前在本頁面或 App 內公告。你亦可隨時停止使用並刪除本 App 及你的資料。</p>
-<h2 data-lang="zh-Hant">九、協議變更</h2>
-<p data-lang="zh-Hant">我們可能不時更新本協議。更新後的協議將展示於本頁面；重大變更會透過 App 內提示或本頁公告告知。你繼續使用本 App 即視為接受更新後的條款。</p>
-<h2 data-lang="zh-Hant">十、聯絡我們</h2>
-<p data-lang="zh-Hant">如有任何問題或回饋，請郵件聯絡：<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a></p>
-
-<!-- ja -->
-<h1 data-lang="ja">ReadAct · 利用規約</h1>
-<p class="meta" data-lang="ja">発効日：2026年9月2日</p>
-<p data-lang="ja">ReadAct（青迹・知行、以下「本アプリ」）へようこそ。本アプリは、あなたが適法に保有する書籍・長文書を構造化された方法論ライブラリ（枠組み・原則・方法・反例・用語・意思決定ルール・問題マップ）に蒸留し、プロデュース・コーチ・タスク・Q&amp;A などのモードで実シーンに応用できるようにするものです。本アプリを利用することで、本利用規約のすべての条項に同意したものとみなされます。同意できない場合は、本アプリを利用しないでください。</p>
-<h2 data-lang="ja">1. サービス内容</h2>
-<p data-lang="ja">本アプリは「読むことから使うことへ」を支援する AI 読書活用ツールです。あなたが適法に所有し利用する権利のある書籍・文書をアップロードすると、AI が解析・蒸留して構造化されたスキルパックと方法論ライブラリを生成します。書籍・文書単位で、プロデュース（テンプレート／チェックリスト／話術／行動計画）、コーチ（AI コーチとの対話）、タスク（リマインダー付きステップチェックリスト）、Q&amp;A（引用の出所付き）などのモードで方法を実践できます。蒸留とモード呼び出しは第三者の AI サービス（主に DeepSeek。詳細はプライバシーポリシー参照）によって提供され、AI が生成した内容は参考情報であり、専門的なアドバイスを構成するものではありません。</p>
-<h2 data-lang="ja">2. アカウントとデータ</h2>
-<p data-lang="ja">本アプリは登録不要で、匿名で利用できます。書籍・方法論ライブラリ・Q&amp;A 履歴・設定はデバイス内に保存され、有効にした場合は Apple iCloud を通じて同期されます。データの管理は利用者の責任であり、デバイスと Apple ID のセキュリティを適切に保護し、重要な資料はご自身でバックアップしてください。</p>
-<h2 data-lang="ja">3. コンテンツと著作権</h2>
-<p data-lang="ja">アップロードできるのは、あなたが適法に所有し利用する権利のあるコンテンツのみです（購入した電子書籍・文書、利用許諾を受けたもの、法令上利用可能なものなど）。権利侵害・違法・第三者の権利を害するコンテンツをアップロードしないでください。アップロードしたコンテンツに起因する責任は利用者が負います。本アプリは原著の著作権を尊重するため、生成物への原文引用には制限を設けています（引用 1 件につき 150 字以内、1 冊あたりの累積引用は全書の 15% 以内）。</p>
-<h2 data-lang="ja">4. 蒸留ポイント・サブスクリプション・アプリ内課金</h2>
-<p data-lang="ja">本アプリは「蒸留ポイント＋呼び出し回数」のクォータ方式です。無料ユーザーには毎月一定のポイントと呼び出し回数が付与されます。Pro へのサブスクリプションまたはアドオン購入で追加できます。サブスクリプションは自動更新式で、App Store（Apple）経由で処理され、Apple の規約に従います。自動更新の確認・管理・解除はシステム設定でいつでも行えます。デジタルコンテンツとポイントは一度消費すると返金対象外です（法令または Apple が別途定める場合を除く）。各プランの内容・価格・特典は、アプリ内および App Store の表示に従います。</p>
-<h2 data-lang="ja">5. AI 生成コンテンツの利用と制限</h2>
-<p data-lang="ja">AI が生成する蒸留結果・Q&amp;A・提案などの内容は大規模言語モデルに基づいており、不正確・不完全・不適切な場合があります。法的・医療的・財務的その他の専門的助言を構成するものではありません。AI コンテンツの利用およびそれに基づく行動は、利用者自身の判断と責任で行ってください。AI 機能を利用して、違法・権利侵害・わいせつ・暴力的・他人の権利を害するコンテンツを生成・アップロードしないでください。</p>
-<h2 data-lang="ja">6. 禁止行為</h2>
-<p data-lang="ja">以下の行為は禁止されています。1) 本アプリのリバースエンジニアリング、クラック、技術的保護の回避。2) 本アプリを利用した違法行為。3) 本アプリまたはバックエンドサービスの正常な動作への干渉・妨害。4) AI 機能の乱用による一括生成、クォータ制限の回避、またはサービス安定性の阻害。</p>
-<h2 data-lang="ja">7. 免責事項</h2>
-<p data-lang="ja">本アプリは「現状のまま」提供され、商品性や特定目的への適合性を含む、明示または黙示の保証は一切ありません。本アプリの利用、AI コンテンツへの依存、またはデータ損失によって生じたいかなる直接的・間接的損害についても、開発者は法律で認められる範囲で責任を負いません。</p>
-<h2 data-lang="ja">8. サービスの変更と終了</h2>
-<p data-lang="ja">本アプリの機能・クォータルールの全部または一部を、随時更新・調整・一時停止・終了する場合があります。重要な変更は事前にこのページまたはアプリ内でお知らせします。利用者はいつでも利用を停止し、アプリとデータを削除できます。</p>
-<h2 data-lang="ja">9. 規約の変更</h2>
-<p data-lang="ja">本規約は随時更新されることがあります。更新後の規約はこのページに掲載され、重要な変更はアプリ内通知またはこのページでお知らせします。本アプリを引き続き利用することは、更新後の条項への同意とみなされます。</p>
-<h2 data-lang="ja">10. お問い合わせ</h2>
-<p data-lang="ja">ご質問やフィードバックは、<a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールでお問い合わせください。</p>
+<h1 data-lang="zh-Hant" data-page-node-id="V87U7hfICSb8YJCMTSdC2b">青跡·知行 · 用戶協議</h1>
+<p class="meta" data-lang="zh-Hant" data-page-node-id="pAQXv2IPZdnRkxHBXyqSiI">生效日期：2026 年 9 月 2 日</p>
+<p data-lang="zh-Hant" data-page-node-id="SpVnpuFmWoVGcqxrBJ6HLp">歡迎使用青跡·知行（英文名 ReadAct，以下簡稱「本 App」）。本 App 幫助你把自己合法持有的書／長文件蒸餾為結構化方法庫（框架、原則、方法、反例、術語、決策規則與問題地圖），並透過產出、陪練、任務、問答等模式，把書中的方法論應用於真實場景。使用本 App 即表示你同意本用戶協議的全部條款。如你不同意，請勿使用本 App。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="dEvHfpmTRCL1MEmoCdsVZu">一、服務說明</h2>
+<p data-lang="zh-Hant" data-page-node-id="nAhvUHDqBMYbX0J5ZIYo9J">本 App 是一款「從讀到用」的 AI 閱讀轉化工具。你上傳自己合法持有、有權使用的書／文件後，AI 會將其解析並蒸餾為結構化的技能包與方法庫；你可以基於單本書或文件，透過產出（範本／清單／話術／行動計畫）、陪練（AI 教練對話）、任務（步驟清單與提醒）、問答（帶引用溯源）等模式，把方法應用到真實場景。蒸餾與模式呼叫由第三方 AI 服務（以 DeepSeek 為主，詳見隱私政策）提供，AI 生成內容僅供參考，不構成任何專業建議。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="V6NDu2a9jwhNnDnOqCcMdz">二、帳戶與資料</h2>
+<p data-lang="zh-Hant" data-page-node-id="Ymeq8jXcfOh2npBbrjpk46">本 App 不要求註冊帳號，以匿名方式使用。你的書、方法庫、問答紀錄與偏好設定保存在裝置本地，並透過你的 Apple iCloud（如啟用）進行同步。你對自己的資料負責，請妥善保管裝置與 Apple ID 安全，並自行留存重要資料。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="Twc8oH37xuH814rH8N6ol4">三、內容與版權</h2>
+<p data-lang="zh-Hant" data-page-node-id="KUYnJAhy1pfVDnw3V01kRs">你僅允許上傳自己合法持有、有權使用的內容（如你購買、獲授權或依法可使用的電子書與文件）。請勿上傳侵權、違法或違背第三方權益的內容。因你上傳內容引發的侵權責任由你自行承擔。本 App 對生成內容中的原文引用設置限制（單條引用不超過 150 字、單書累計引用比例不超過全書 15%），以尊重原書版權。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="GC98WXGSWlIl8OClU4DeDA">四、提煉點、訂閱與內購</h2>
+<p data-lang="zh-Hant" data-page-node-id="gS3daIkR4K98vUdVFboo67">本 App 採用「提煉點＋呼叫次數」的配額模式，免費使用者每月享有一定提煉點與呼叫次數。你可以透過訂閱 Pro 或購買加購包取得更多額度。訂閱為自動續費訂閱，透過 App Store（Apple）管道完成，受 Apple 相關條款約束；你可在系統設定中隨時查看、管理或關閉自動續費。數位內容與點數服務一經消耗不支援退款，除非法律或 Apple 另有規定。各檔位、價格與權益以 App 內及 App Store 實際展示為準。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="1NYdEUHiG3QusPYX2AHB1W">五、AI 生成內容的使用與限制</h2>
+<p data-lang="zh-Hant" data-page-node-id="xrOuEaKGzFcjjdBYWCPOub">AI 生成的蒸餾結果、問答、建議等內容基於大型語言模型，可能存在不準確、不完整或不適用的情形，不構成法律、醫療、財務等專業意見。你應自行判斷並承擔使用 AI 內容及據此行動的後果。請勿利用 AI 功能生成或上傳違法、侵權、色情、暴力或危害他人權益的內容。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="L5tTlj1R1KVGiMa5NyFYHT">六、禁止行為</h2>
+<p data-lang="zh-Hant" data-page-node-id="8U9WBj24n8UrqOKOTFFjN2">你不得：1) 對本 App 進行反向工程、破解或繞過任何技術保護措施；2) 利用本 App 從事任何違法活動；3) 干擾、破壞本 App 或後端服務的正常運行；4) 濫用 AI 功能進行批次生成、規避配額限制或影響服務穩定性。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="inXJn7oCdVH3ulvJD9s4Ed">七、免責聲明</h2>
+<p data-lang="zh-Hant" data-page-node-id="6h8L32KBDBZC65FQv1IENa">本 App 按「現狀」提供，不提供任何明示或暗示的擔保，包括但不限於適銷性、特定用途適用性。因使用本 App、依賴 AI 內容或資料遺失造成的任何直接或間接損失，開發者在法律允許的範圍內不承擔責任。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="vnGDNQ6ysfUs3NEgziaXal">八、服務的變更與終止</h2>
+<p data-lang="zh-Hant" data-page-node-id="5XYb9ALRA0Y8EDMHwLc1Ra">我們可能隨時更新、調整、暫停或終止本 App 的全部或部分功能與配額規則。重大變更將提前在本頁面或 App 內公告。你亦可隨時停止使用並刪除本 App 及你的資料。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="SPGgSylh3jvCv9CoNOFFHI">九、協議變更</h2>
+<p data-lang="zh-Hant" data-page-node-id="NQYBCSBo15HJg0JYlLTTBI">我們可能不時更新本協議。更新後的協議將展示於本頁面；重大變更會透過 App 內提示或本頁公告告知。你繼續使用本 App 即視為接受更新後的條款。</p>
+<h2 data-lang="zh-Hant" data-page-node-id="2FB7LXrQNTHJ0BZjPuMD8o">十、聯絡我們</h2>
+<p data-lang="zh-Hant" data-page-node-id="xBBApRY391Zw1ilYGjDvdn">如有任何問題或回饋，請郵件聯絡：<a href="mailto:mygrowthlife@gmail.com" data-page-node-id="TcLTqPTtiDJoIBDNWjczip">mygrowthlife@gmail.com</a></p>
 
 <script>
-const supported = ['zh-Hans','en','zh-Hant','ja'];
+const supported = ['zh-Hans','en','zh-Hant'];
 
 function showLang(lang) {
     if (!supported.includes(lang)) lang = 'en';
@@ -162,7 +207,6 @@ function detectLang() {
         const region = (navigator.language || '').toLowerCase();
         return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
     }
-    if (supported.includes(nav[0])) return nav[0];
     return 'en';
 }
 

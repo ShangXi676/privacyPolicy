@@ -1,220 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="zh-Hans" data-page-node-id="XLSmhFVZVmjc697uzyWiHh">
+<head data-page-node-id="PHxhB6XTAKhWrDk9zekECC">
+    <meta charset="UTF-8" data-page-node-id="lXiivC0PSNVVG9FkINmTAt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="uHm0muQMwCnBOcJHBJbE2Z">
     <title>技术支持 — 青迹·知行</title>
     <style>
-        :root { color-scheme: light dark; --bg: #F8F9FA; --card: #FFFFFF; --text: #111827; --heading: #111827; --sub: #6B7280; --link: #2563EB; --h2: #2563EB; --shadow: 0 1px 3px rgba(0,0,0,0.08); --btn-bg: #FFFFFF; --btn-border: #D1D5DB; --btn-text: #111827; --btn-active-text: #FFFFFF; }
-        :root[data-theme="dark"] { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Noto Sans KR', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: var(--text); line-height: 1.8; background: var(--bg); }
-        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
-        h2 { font-size: 18px; margin-top: 0; color: var(--h2); }
-        a { color: var(--link); }
-        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
-        .btn { display: inline-block; background: var(--link); color: #0B0E14; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; }
-        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-bar button { background: var(--btn-bg); border: 1px solid var(--btn-border); border-radius: 6px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--btn-text); }
-        .lang-bar button.active { background: var(--link); color: var(--btn-active-text); border-color: var(--link); }
+        /* 主题色板：与 ReadAct App ColorToken 同步（DESIGN_SPEC §2.1）
+           浅色 = 暖纸 · 青墨   深色 = 暖炭夜 · 浅青墨 */
+        :root {
+            color-scheme: light dark;
+            --bg: #F3F0E8;
+            --bg-deep: #ECE6DA;
+            --card: #FCFBF6;
+            --text: #24211A;
+            --heading: #24211A;
+            --sub: #5B5549;
+            --hint: #968E7F;
+            --link: #1F5E56;
+            --h2: #1F5E56;
+            --line: #E4DDCE;
+            --line-strong: #D3CAB8;
+            --accent-soft: #E3ECE7;
+            --seal: #A8422C;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+            --btn-bg: #1F5E56;
+            --btn-text: #F3F0E8;
+            --btn-border: #1F5E56;
+            --btn-active-bg: #FCFBF6;
+            --btn-active-text: #1F5E56;
+        }
         @media (prefers-color-scheme: dark) {
-            :root:not([data-theme]) { --bg: #0B0E14; --card: #13161D; --text: #ECEDEE; --heading: #FFFFFF; --sub: #9BA1AD; --link: #C8A45C; --h2: #C8A45C; --shadow: 0 1px 3px rgba(0,0,0,0.4); --btn-bg: #1A1E27; --btn-border: #333333; --btn-text: #ECEDEE; --btn-active-text: #0B0E14; }
+            :root:not([data-theme]) {
+                --bg: #1A1712;
+                --bg-deep: #211D16;
+                --card: #25211A;
+                --text: #EAE5DA;
+                --heading: #EAE5DA;
+                --sub: #A9A294;
+                --hint: #8A8274;
+                --link: #94C5B6;
+                --h2: #94C5B6;
+                --line: #3D382D;
+                --line-strong: #4B4437;
+                --accent-soft: #1D2C27;
+                --seal: #E08E75;
+                --shadow: 0 1px 3px rgba(0,0,0,0.4);
+                --btn-bg: #94C5B6;
+                --btn-text: #1A1712;
+                --btn-border: #94C5B6;
+                --btn-active-bg: #25211A;
+                --btn-active-text: #94C5B6;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', 'Noto Sans CJK SC', 'Helvetica Neue', sans-serif;
+            max-width: 680px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: var(--text);
+            line-height: 1.8;
+            background: var(--bg);
+        }
+        h1 { font-size: 24px; margin-bottom: 8px; color: var(--heading); font-weight: 600; letter-spacing: 0.5px; }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 26px 0 8px;
+            padding-left: 10px;
+            border-left: 3px solid var(--h2);
+            color: var(--h2);
+        }
+        p { margin: 10px 0; font-size: 15px; }
+        .meta { color: var(--hint); font-size: 14px; margin-bottom: 24px; }
+        a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--line); }
+        a:hover { border-bottom-color: var(--link); }
+        .lang-bar { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .lang-bar button {
+            background: var(--btn-active-bg);
+            border: 1px solid var(--btn-border);
+            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--btn-active-text);
+        }
+        .lang-bar button.active {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            border-color: var(--btn-bg);
         }
         [data-lang] { display: none; }
         [data-lang].show { display: revert; }
-        .card[data-lang].show { display: block; }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: var(--shadow); }
+        .btn { display: inline-block; background: var(--link); color: var(--btn-text); padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; border: none; }
     </style>
 </head>
-<body>
+<body data-page-node-id="xhE56WeaaMhaHhTM774tgb">
 
-<div class="lang-bar">
-    <button onclick="switchLang('zh-Hans')" id="btn-zh">简体中文</button>
-    <button onclick="switchLang('en')" id="btn-en">English</button>
-    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant">繁體中文</button>
-    <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+<div class="lang-bar" data-page-node-id="DVf6OTz6wnZHGodxRJvJn3">
+    <button onclick="switchLang('zh-Hans')" id="btn-zh" data-page-node-id="15vZsHc5TRT3IzhOyzCKdV">简体中文</button>
+    <button onclick="switchLang('en')" id="btn-en" data-page-node-id="o8aO80lGcC6YnFDC0XXqRS">English</button>
+    <button onclick="switchLang('zh-Hant')" id="btn-zh-Hant" data-page-node-id="AoCx651zH7LPIKLvw2GydO">繁體中文</button>
 </div>
 
 <!-- zh-Hans -->
-<h1 data-lang="zh-Hans">青迹·知行 · 技术支持</h1>
-<p data-lang="zh-Hans">感谢使用青迹·知行（ReadAct）！如在使用中遇到问题或有建议，欢迎随时反馈。</p>
-<div class="card" data-lang="zh-Hans">
-    <h2>邮件反馈</h2>
-    <p>发送邮件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我们会尽快回复。</p>
-    <a class="btn" href="mailto:mygrowthlife@gmail.com">发送邮件</a>
+<h1 data-lang="zh-Hans" data-page-node-id="bYHHSH0SYDD1ATvmPe8kHr">青迹·知行 · 技术支持</h1>
+<p data-lang="zh-Hans" data-page-node-id="hroORxTmWXRMb2gpe77ErH">感谢使用青迹·知行（ReadAct）！如在使用中遇到问题或有建议，欢迎随时反馈。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="3XRPoXw2BNJDelwFORhb9n">
+    <h2 data-page-node-id="J7QyCrFlByH1g74QESwLmh">邮件反馈</h2>
+    <p data-page-node-id="bVBqvyceG1gTWMIu8O3XsD">发送邮件至 <a href="mailto:mygrowthlife@gmail.com" data-page-node-id="gZooZ82WoCE9oZuhNFfWFK">mygrowthlife@gmail.com</a>，我们会尽快回复。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com" data-page-node-id="duAjGBB3DAf3qnuda6sbwa">发送邮件</a>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>上传什么格式的书/文档？</h2>
-    <p>支持 PDF、EPUB、MOBI、AZW3、TXT 与 Markdown。建议上传有文字层（可选中/复制文字）的文件；纯扫描图片且无文字层的 PDF 暂不支持整本识别。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="tjjqvJ8lytWtNWNPjlel0l">
+    <h2 data-page-node-id="zUzilvIupfRfCCPk3uNcl4">上传什么格式的书/文档？</h2>
+    <p data-page-node-id="NRJjhnFy9gUJS6cuXEX72B">支持 PDF、EPUB、MOBI、AZW3、TXT 与 Markdown。建议上传有文字层（可选中/复制文字）的文件；纯扫描图片且无文字层的 PDF 暂不支持整本识别。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>蒸馏提示「提炼点不足」？</h2>
-    <p>蒸馏一本书会按书的内容大小消耗提炼点（约每 30 万字消耗 1 点，单本 1–10 点）。免费用户每月享有固定提炼点与调用次数，用完后可在 App 内升级 Pro 或购买提炼点/调用加购包。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="jzgXhFMzICrlbvsYFhwEZq">
+    <h2 data-page-node-id="eOdfKqnEXP15W5ssxkO1xU">蒸馏提示「提炼点不足」？</h2>
+    <p data-page-node-id="UCGjj2Bye7uxlAPA5XqaBi">蒸馏一本书会按书的内容大小消耗提炼点（约每 30 万字消耗 1 点，单本 1–10 点）。免费用户每月享有固定提炼点与调用次数，用完后可在 App 内升级 Pro 或购买提炼点/调用加购包。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>AI 没有回复 / 回复失败</h2>
-    <p>AI 功能需要联网，通过我们的服务（readact.shxlab.com）调用第三方大语言模型（以 DeepSeek 为主）。请确认：1) 手机网络可用；2) 稍等片刻后重试。若持续失败，请截图页面并邮件反馈给我们。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="grMmwXmCeTHYxrfg4Gvo3A">
+    <h2 data-page-node-id="5z9DOacYobgv3S3PCgSnAY">AI 没有回复 / 回复失败</h2>
+    <p data-page-node-id="kN3usioK9QwmbsOO9BqGu6">AI 功能需要联网，通过我们的服务（readact.shxlab.com）调用第三方大语言模型（以 DeepSeek 为主）。请确认：1) 手机网络可用；2) 稍等片刻后重试。若持续失败，请截图页面并邮件反馈给我们。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>AI 回复很慢</h2>
-    <p>首次调用需要连接 AI 服务并加载上下文，通常需数秒至十余秒；网络不佳或内容较长时会更慢，请耐心等待，不要重复发送。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="2dN6aaG39HGEhQm167VClx">
+    <h2 data-page-node-id="GPkP1CgYf5s9BWdLHUn6tJ">AI 回复很慢</h2>
+    <p data-page-node-id="iB0PUPpan0ErGccTOIy7Oe">首次调用需要连接 AI 服务并加载上下文，通常需数秒至十余秒；网络不佳或内容较长时会更慢，请耐心等待，不要重复发送。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>为什么生成内容带引用？</h2>
-    <p>为保证可追溯，蒸馏产物与问答/产出内容会附上原书中的引用片段。为尊重版权，单条引用不超过 150 字、单书累计引用比例不超过全书 15%。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="9Q9wYubS6zgrFw0lx29N5A">
+    <h2 data-page-node-id="7QSjmhRxFIW8kHthhxd1SE">为什么生成内容带引用？</h2>
+    <p data-page-node-id="cIbVEtEKquqAGM33JSLsFn">为保证可追溯，蒸馏产物与问答/产出内容会附上原书中的引用片段。为尊重版权，单条引用不超过 150 字、单书累计引用比例不超过全书 15%。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>我的书与数据存在哪里？</h2>
-    <p>书籍、方法库、问答与偏好默认保存在设备本地。若你开启了 iCloud，数据会通过你的 Apple ID（CloudKit/SwiftData）自动同步到你的其他设备；除 AI 处理所需的必要文本分块外，我们不会上传到自有服务器。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="AAYYscLPsDfoH2EGS6Sqxt">
+    <h2 data-page-node-id="8VDhkXE16THKF2TLsnSdgP">我的书与数据存在哪里？</h2>
+    <p data-page-node-id="6Ag5bCBQGvkOesyXbWxDwx">书籍、方法库、问答与偏好默认保存在设备本地。若你开启了 iCloud，数据会通过你的 Apple ID（CloudKit/SwiftData）自动同步到你的其他设备；除 AI 处理所需的必要文本分块外，我们不会上传到自有服务器。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>如何删除我的数据？</h2>
-    <p>删除单本书籍：书籍详情页 →「删除书籍」。清除全部数据：设置 →「清除 iCloud 数据」。删除 App 后，可在系统设置中删除来自 iCloud 的数据。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="cW2lqgDXhh0EBC11J0ewk7">
+    <h2 data-page-node-id="JAhfsg8FngfataivJlqApX">如何删除我的数据？</h2>
+    <p data-page-node-id="0XCG1lZJskdHK14NtmdgHO">删除单本书籍：书籍详情页 →「删除书籍」。清除全部数据：设置 →「清除 iCloud 数据」。删除 App 后，可在系统设置中删除来自 iCloud 的数据。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>订阅 / 加购问题</h2>
-    <p>订阅与加购通过 App Store 完成。管理或取消订阅请前往「系统设置 → Apple ID → 订阅」。若已购买但未生效，请先尝试在 App 内恢复购买，仍无效则附上订单截图邮件反馈。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="JZEjtDRmcy4FS9FCDMVnyO">
+    <h2 data-page-node-id="eAlIQQrYbPhFs6DAXUEB1m">订阅 / 加购问题</h2>
+    <p data-page-node-id="q2WH5MxbIDifxcD2DMJdSj">订阅与加购通过 App Store 完成。管理或取消订阅请前往「系统设置 → Apple ID → 订阅」。若已购买但未生效，请先尝试在 App 内恢复购买，仍无效则附上订单截图邮件反馈。</p>
 </div>
-<div class="card" data-lang="zh-Hans">
-    <h2>功能建议</h2>
-    <p>欢迎通过邮件分享你的使用场景和功能建议，帮助我们让青迹·知行变得更好。</p>
+<div class="card" data-lang="zh-Hans" data-page-node-id="lXPmpbgTx3XFUamIue4ioX">
+    <h2 data-page-node-id="6UrYQI2vyGlmO7Ucog9dVy">功能建议</h2>
+    <p data-page-node-id="giibfHFE3wdhPGTgC8ZlU3">欢迎通过邮件分享你的使用场景和功能建议，帮助我们让青迹·知行变得更好。</p>
 </div>
 
 <!-- en -->
-<h1 data-lang="en">ReadAct · Support</h1>
-<p data-lang="en">Thanks for using ReadAct (QingJi·ZhiXing / 青迹·知行)! If you run into any issues or have suggestions, we'd love to hear from you.</p>
-<div class="card" data-lang="en">
-    <h2>Email Support</h2>
-    <p>Send us an email at <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> and we'll get back to you as soon as possible.</p>
-    <a class="btn" href="mailto:mygrowthlife@gmail.com">Send Email</a>
+<h1 data-lang="en" data-page-node-id="isJ1UfjNEkYpqnqzSjQ5nV">ReadAct · Support</h1>
+<p data-lang="en" data-page-node-id="TCxEXnA7vLJ3K4AhzSuiVY">Thanks for using ReadAct (QingJi·ZhiXing / 青迹·知行)! If you run into any issues or have suggestions, we'd love to hear from you.</p>
+<div class="card" data-lang="en" data-page-node-id="HrjoD9h1aHfC7hFWgcmc1J">
+    <h2 data-page-node-id="44A3FElp11jCd4u0CXlosz">Email Support</h2>
+    <p data-page-node-id="1AKYa99qKSqMvex6ZXP8Wd">Send us an email at <a href="mailto:mygrowthlife@gmail.com" data-page-node-id="V2d61Br31aVJ79Hn2KT8fR">mygrowthlife@gmail.com</a> and we'll get back to you as soon as possible.</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com" data-page-node-id="8GiERqWAuUxyWduGmpWgNN">Send Email</a>
 </div>
-<div class="card" data-lang="en">
-    <h2>Which formats are supported?</h2>
-    <p>We support PDF, EPUB, MOBI, AZW3, TXT, and Markdown. Files with a selectable/copyable text layer are recommended; scanned PDFs without a text layer are not yet supported for whole-book recognition.</p>
+<div class="card" data-lang="en" data-page-node-id="HHlsrPLgKylLpcG9QGLjIU">
+    <h2 data-page-node-id="0SnayRdfvULIsH1B3ChPcG">Which formats are supported?</h2>
+    <p data-page-node-id="kwdu8mjRZDA5XlaHbXTfAD">We support PDF, EPUB, MOBI, AZW3, TXT, and Markdown. Files with a selectable/copyable text layer are recommended; scanned PDFs without a text layer are not yet supported for whole-book recognition.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>"Not enough distill points"?</h2>
-    <p>Distilling a book consumes distill points based on its size (about 1 point per 300,000 words, 1–10 points per book). Free users get a fixed monthly allowance of points and calls. When exhausted, upgrade to Pro or buy a distill-points/calls add-on in the App.</p>
+<div class="card" data-lang="en" data-page-node-id="V1EY5eyDltpBV74ZQlDPkJ">
+    <h2 data-page-node-id="x2LW33bcSFDUBe0xrJFeyN">"Not enough distill points"?</h2>
+    <p data-page-node-id="FvCZpMhy0VDno6NLbSzDDA">Distilling a book consumes distill points based on its size (about 1 point per 300,000 words, 1–10 points per book). Free users get a fixed monthly allowance of points and calls. When exhausted, upgrade to Pro or buy a distill-points/calls add-on in the App.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>AI not responding / request failed</h2>
-    <p>AI features require an internet connection and are routed through our service (readact.shxlab.com) to third-party large language models (primarily DeepSeek). Please make sure: 1) your network is available; 2) wait a moment and retry. If it keeps failing, take a screenshot and email us.</p>
+<div class="card" data-lang="en" data-page-node-id="jMMUh7Dx550FkzK4nGCCiV">
+    <h2 data-page-node-id="VFDsujfs4JPjy8CLxL6Sih">AI not responding / request failed</h2>
+    <p data-page-node-id="Obqsbt5HaLlHdO6Ntq8d7g">AI features require an internet connection and are routed through our service (readact.shxlab.com) to third-party large language models (primarily DeepSeek). Please make sure: 1) your network is available; 2) wait a moment and retry. If it keeps failing, take a screenshot and email us.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>AI replies are slow</h2>
-    <p>The first call needs to connect to the AI service and load context, which usually takes a few to a dozen-plus seconds; a poor network or long content can make it slower. Please be patient and do not send duplicate messages.</p>
+<div class="card" data-lang="en" data-page-node-id="GpEy2LZ7VALJIcAhuGXjyZ">
+    <h2 data-page-node-id="NADBi1RKwcVJoDdSapzX3m">AI replies are slow</h2>
+    <p data-page-node-id="IhehOkZP8fYSCkkNHiIZ9E">The first call needs to connect to the AI service and load context, which usually takes a few to a dozen-plus seconds; a poor network or long content can make it slower. Please be patient and do not send duplicate messages.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>Why do generated results include citations?</h2>
-    <p>For traceability, distilled outputs and Q&amp;A/production content include excerpts from the source book. To respect copyright, each citation is limited to 150 characters, and cumulative excerpts per book are limited to 15% of the book.</p>
+<div class="card" data-lang="en" data-page-node-id="vHX99bCY2clD0Kt10TjAzt">
+    <h2 data-page-node-id="aUrVhf6c3k77zfo3NmdmX2">Why do generated results include citations?</h2>
+    <p data-page-node-id="bH5R25mrYOOv0aVxKGNf8G">For traceability, distilled outputs and Q&amp;A/production content include excerpts from the source book. To respect copyright, each citation is limited to 150 characters, and cumulative excerpts per book are limited to 15% of the book.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>Where is my data stored?</h2>
-    <p>Books, methodology libraries, Q&amp;A, and preferences are stored locally on your device by default. If you enable iCloud, data is automatically synced to your other devices through your Apple ID (CloudKit/SwiftData). Except for the necessary text chunks required for AI processing, we do not upload your content to our own servers.</p>
+<div class="card" data-lang="en" data-page-node-id="2Ez4BNxSeZFWKiFCGBx2oM">
+    <h2 data-page-node-id="Cq7tewsk7lrqCnJeXCkpWk">Where is my data stored?</h2>
+    <p data-page-node-id="HCo5uNGXRKJSE0O688TWhB">Books, methodology libraries, Q&amp;A, and preferences are stored locally on your device by default. If you enable iCloud, data is automatically synced to your other devices through your Apple ID (CloudKit/SwiftData). Except for the necessary text chunks required for AI processing, we do not upload your content to our own servers.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>How do I delete my data?</h2>
-    <p>To delete a single book: open the book detail page → "Delete Book". To clear all data: Settings → "Clear iCloud Data". After deleting the App, you can also delete data from iCloud in System Settings.</p>
+<div class="card" data-lang="en" data-page-node-id="1ivEL9KGq7QbdswtttAGG6">
+    <h2 data-page-node-id="ucIRt2E9sFA62NrG0I3Y2B">How do I delete my data?</h2>
+    <p data-page-node-id="hw7vQWHt05mK9vq2Z2NYTU">To delete a single book: open the book detail page → "Delete Book". To clear all data: Settings → "Clear iCloud Data". After deleting the App, you can also delete data from iCloud in System Settings.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>Subscription / Add-on issues</h2>
-    <p>Subscriptions and add-ons are purchased through the App Store. To manage or cancel a subscription, go to "System Settings → Apple ID → Subscriptions". If a purchase hasn't taken effect, first try restoring purchases in the App; if it still fails, email us with a screenshot of your receipt.</p>
+<div class="card" data-lang="en" data-page-node-id="VHcZ2tW1STEnmbIPCpFsCt">
+    <h2 data-page-node-id="G38AaPOzKFZBtOaPmu69Pw">Subscription / Add-on issues</h2>
+    <p data-page-node-id="ZtROwfUzdpxj6W9sPCDRrC">Subscriptions and add-ons are purchased through the App Store. To manage or cancel a subscription, go to "System Settings → Apple ID → Subscriptions". If a purchase hasn't taken effect, first try restoring purchases in the App; if it still fails, email us with a screenshot of your receipt.</p>
 </div>
-<div class="card" data-lang="en">
-    <h2>Feature Requests</h2>
-    <p>Tell us about your use cases and feature ideas via email — we read every piece of feedback and use it to make ReadAct better.</p>
+<div class="card" data-lang="en" data-page-node-id="C83NvBPsd74HdFXDNoLqLv">
+    <h2 data-page-node-id="PkqKqex8YQqYlIdIflELeA">Feature Requests</h2>
+    <p data-page-node-id="zKpRcmFO2kaIO7jXMRBfbO">Tell us about your use cases and feature ideas via email — we read every piece of feedback and use it to make ReadAct better.</p>
 </div>
 
 <!-- zh-Hant -->
-<h1 data-lang="zh-Hant">青跡·知行 · 技術支援</h1>
-<p data-lang="zh-Hant">感謝使用青跡·知行（ReadAct）！如在使用中遇到問題或有建議，歡迎隨時回饋。</p>
-<div class="card" data-lang="zh-Hant">
-    <h2>郵件回饋</h2>
-    <p>發送郵件至 <a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a>，我們會盡快回覆。</p>
-    <a class="btn" href="mailto:mygrowthlife@gmail.com">發送郵件</a>
+<h1 data-lang="zh-Hant" data-page-node-id="ha9yBEh72LjuWQYyJHU1fW">青跡·知行 · 技術支援</h1>
+<p data-lang="zh-Hant" data-page-node-id="wDzDM26CeI7FFJ5qgziExS">感謝使用青跡·知行（ReadAct）！如在使用中遇到問題或有建議，歡迎隨時回饋。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="69QAfGCLrn6POvhRT3WZn2">
+    <h2 data-page-node-id="LelGRgxVILK7Q2Tc3bb7CC">郵件回饋</h2>
+    <p data-page-node-id="GkXYv16KthSxRgBl7QAH9P">發送郵件至 <a href="mailto:mygrowthlife@gmail.com" data-page-node-id="AW3RuHgzTRFNa9sxsbmccj">mygrowthlife@gmail.com</a>，我們會盡快回覆。</p>
+    <a class="btn" href="mailto:mygrowthlife@gmail.com" data-page-node-id="O6KYy4F3EN19gMcvvoVLBP">發送郵件</a>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>支援什麼格式的書／文件？</h2>
-    <p>支援 PDF、EPUB、MOBI、AZW3、TXT 與 Markdown。建議上傳有文字層（可選取／複製文字）的檔案；純掃描圖片且無文字層的 PDF 暫不支援整本辨識。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="oGbsgGjigiAJMUk2vJYqEr">
+    <h2 data-page-node-id="ZQ3I23WapHtx0nZ103QsFR">支援什麼格式的書／文件？</h2>
+    <p data-page-node-id="Yi6KzVC2occZz5s1GnaFsd">支援 PDF、EPUB、MOBI、AZW3、TXT 與 Markdown。建議上傳有文字層（可選取／複製文字）的檔案；純掃描圖片且無文字層的 PDF 暫不支援整本辨識。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>蒸餾提示「提煉點不足」？</h2>
-    <p>蒸餾一本書會按內容大小消耗提煉點（約每 30 萬字消耗 1 點，單本 1–10 點）。免費使用者每月享有固定提煉點與呼叫次數，用完後可在 App 內升級 Pro 或購買提煉點／呼叫加購包。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="lK6nKFZY30uIJZirtm3X5p">
+    <h2 data-page-node-id="e7bJNue6CEFucVWQ35O9Pt">蒸餾提示「提煉點不足」？</h2>
+    <p data-page-node-id="yS8WN91Envec2B6dlZV68x">蒸餾一本書會按內容大小消耗提煉點（約每 30 萬字消耗 1 點，單本 1–10 點）。免費使用者每月享有固定提煉點與呼叫次數，用完後可在 App 內升級 Pro 或購買提煉點／呼叫加購包。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>AI 沒有回覆／回覆失敗</h2>
-    <p>AI 功能需要連網，透過我們的服務（readact.shxlab.com）呼叫第三方大型語言模型（以 DeepSeek 為主）。請確認：1) 手機網路可用；2) 稍等片刻後重試。若持續失敗，請截圖頁面並郵件回饋給我們。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="8dXvTLSjHnvzw1UIJwjFuH">
+    <h2 data-page-node-id="Te7YiN1I7mLvQKgCRbQ6hT">AI 沒有回覆／回覆失敗</h2>
+    <p data-page-node-id="OIlFKnH1Cgq96XF0PO9DaJ">AI 功能需要連網，透過我們的服務（readact.shxlab.com）呼叫第三方大型語言模型（以 DeepSeek 為主）。請確認：1) 手機網路可用；2) 稍等片刻後重試。若持續失敗，請截圖頁面並郵件回饋給我們。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>AI 回覆很慢</h2>
-    <p>首次呼叫需要連接 AI 服務並載入上下文，通常需數秒至十餘秒；網路不佳或內容較長時會更慢，請耐心等待，不要重複發送。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="Qd7VqMn22fQ9HoA6sZDsNH">
+    <h2 data-page-node-id="Gag52PL2nmwQqGu3AZGKVz">AI 回覆很慢</h2>
+    <p data-page-node-id="4obxSlovG0b4bOTBpQE4J5">首次呼叫需要連接 AI 服務並載入上下文，通常需數秒至十餘秒；網路不佳或內容較長時會更慢，請耐心等待，不要重複發送。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>為什麼生成內容帶引用？</h2>
-    <p>為保證可追溯，蒸餾產物與問答／產出內容會附上原書中的引用片段。為尊重版權，單條引用不超過 150 字、單書累計引用比例不超過全書 15%。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="EGT0fAW3YxoJ8V8frjDe6c">
+    <h2 data-page-node-id="XOHAI5Tf1I0RIEEcHExebs">為什麼生成內容帶引用？</h2>
+    <p data-page-node-id="xCO8zOICPBYz9cDE0qsHh0">為保證可追溯，蒸餾產物與問答／產出內容會附上原書中的引用片段。為尊重版權，單條引用不超過 150 字、單書累計引用比例不超過全書 15%。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>我的書與資料存在哪裡？</h2>
-    <p>書籍、方法庫、問答與偏好預設保存在裝置本地。若你開啟了 iCloud，資料會透過你的 Apple ID（CloudKit/SwiftData）自動同步到你的其他裝置；除 AI 處理所需的必要文字分塊外，我們不會上傳到自有伺服器。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="8eWW5xGPBs2pHO5ZbFhQvq">
+    <h2 data-page-node-id="km6ZgW1NUgTe8CeZe9Qlis">我的書與資料存在哪裡？</h2>
+    <p data-page-node-id="JgrZGQOw9dbEHDsUIp7Gi3">書籍、方法庫、問答與偏好預設保存在裝置本地。若你開啟了 iCloud，資料會透過你的 Apple ID（CloudKit/SwiftData）自動同步到你的其他裝置；除 AI 處理所需的必要文字分塊外，我們不會上傳到自有伺服器。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>如何刪除我的資料？</h2>
-    <p>刪除單本書籍：書籍詳情頁 →「刪除書籍」。清除全部資料：設定 →「清除 iCloud 資料」。刪除 App 後，可在系統設定中刪除來自 iCloud 的資料。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="DK8bew9CLgmlxknWbXY1vT">
+    <h2 data-page-node-id="DmFFopFG1CPVtyKpEsp3E1">如何刪除我的資料？</h2>
+    <p data-page-node-id="aAhHcKLMoAU5jpDJmZh28x">刪除單本書籍：書籍詳情頁 →「刪除書籍」。清除全部資料：設定 →「清除 iCloud 資料」。刪除 App 後，可在系統設定中刪除來自 iCloud 的資料。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>訂閱／加購問題</h2>
-    <p>訂閱與加購透過 App Store 完成。管理或取消訂閱請前往「系統設定 → Apple ID → 訂閱」。若已購買但未生效，請先嘗試在 App 內恢復購買，仍無效則附上訂單截圖郵件回饋。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="gr3hfppWyop9tocEAT13FD">
+    <h2 data-page-node-id="jNR1qW07DQKBUZxZTihfkG">訂閱／加購問題</h2>
+    <p data-page-node-id="IVy5h0b4ZAvPfdeqTrf7n9">訂閱與加購透過 App Store 完成。管理或取消訂閱請前往「系統設定 → Apple ID → 訂閱」。若已購買但未生效，請先嘗試在 App 內恢復購買，仍無效則附上訂單截圖郵件回饋。</p>
 </div>
-<div class="card" data-lang="zh-Hant">
-    <h2>功能建議</h2>
-    <p>歡迎透過郵件分享你的使用情境與功能建議，幫助我們讓青跡·知行變得更好。</p>
-</div>
-
-<!-- ja -->
-<h1 data-lang="ja">ReadAct · サポート</h1>
-<p data-lang="ja">ReadAct（青迹・知行）をご利用いただきありがとうございます！ご質問やご提案がございましたら、お気軽にお知らせください。</p>
-<div class="card" data-lang="ja">
-    <h2>メールサポート</h2>
-    <p><a href="mailto:mygrowthlife@gmail.com">mygrowthlife@gmail.com</a> までメールをお送りください。できるだけ早く返信いたします。</p>
-    <a class="btn" href="mailto:mygrowthlife@gmail.com">メールを送る</a>
-</div>
-<div class="card" data-lang="ja">
-    <h2>対応している形式は？</h2>
-    <p>PDF・EPUB・MOBI・AZW3・TXT・Markdown に対応しています。文字を選択・コピーできるテキストレイヤーを持つファイルを推奨します。文字レイヤーのないスキャン PDF の全冊認識にはまだ対応していません。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>「蒸留ポイントが不足しています」と表示される</h2>
-    <p>書籍 1 冊の蒸留には、そのサイズに応じたポイントが必要です（約 30 万字につき 1 ポイント、1 冊あたり 1〜10 ポイント）。無料ユーザーには毎月一定のポイントと呼び出し回数が付与されます。使い切った場合は、アプリ内で Pro にアップグレードするか、ポイント・呼び出し回数のアドオンを購入してください。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>AI が応答しない／失敗する</h2>
-    <p>AI 機能にはインターネット接続が必要で、当社のサービス（readact.shxlab.com）を経由して第三者の大規模言語モデル（主に DeepSeek）にルーティングされます。1) 端末のネットワークが利用可能か、2) 少し待ってから再試行するかをご確認ください。それでも失敗する場合は、画面のスクリーンショットを添えてメールでお問い合わせください。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>AI の応答が遅い</h2>
-    <p>初回の呼び出しでは AI サービスへの接続とコンテキストの読み込みが必要で、通常数秒から十数秒かかります。ネットワークが悪い場合や内容が長い場合はさらに遅くなります。お待ちいただき、重複送信はしないでください。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>なぜ生成結果に引用が付くのですか？</h2>
-    <p>トレーサビリティを確保するため、蒸留成果物と Q&amp;A・プロデュースの内容には原書からの引用が添付されます。著作権を尊重するため、引用 1 件は 150 字以内、1 冊あたりの累積引用は全書の 15% 以内に制限されています。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>データはどこに保存されますか？</h2>
-    <p>書籍・方法論ライブラリ・Q&amp;A・設定は、既定ではデバイス内に保存されます。iCloud を有効にすると、Apple ID（CloudKit/SwiftData）を通じて他のデバイスに自動同期されます。AI 処理に必要なテキストチャンクを除き、自社サーバーにアップロードすることはありません。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>データを削除するには？</h2>
-    <p>個別の書籍を削除するには：書籍詳細ページ →「書籍を削除」。全データを消去するには：設定 →「iCloud データを消去」。アプリ削除後は、システム設定で iCloud からデータを削除することもできます。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>サブスクリプション／アドオンの問題</h2>
-    <p>サブスクリプションとアドオンは App Store を通じて購入します。管理・解約は「システム設定 → Apple ID → サブスクリプション」で行えます。購入済みなのに反映されない場合は、まずアプリ内で購入を復元してください。それでも解決しない場合は、注文のスクリーンショットを添えてメールでお問い合わせください。</p>
-</div>
-<div class="card" data-lang="ja">
-    <h2>機能リクエスト</h2>
-    <p>ご利用シーンや機能のアイデアをメールでお聞かせください。すべてのご意見に目を通し、ReadAct をより良くするために活用しています。</p>
+<div class="card" data-lang="zh-Hant" data-page-node-id="obNc29CEc6jW5DwBRExsM2">
+    <h2 data-page-node-id="tXYFxNjVMdufdk56kDXNfP">功能建議</h2>
+    <p data-page-node-id="t1hVGf4cgpgugpykhm1oN3">歡迎透過郵件分享你的使用情境與功能建議，幫助我們讓青跡·知行變得更好。</p>
 </div>
 
 <script>
-const supported = ['zh-Hans','en','zh-Hant','ja'];
+const supported = ['zh-Hans','en','zh-Hant'];
 
 function showLang(lang) {
     if (!supported.includes(lang)) lang = 'en';
@@ -244,7 +269,6 @@ function detectLang() {
         const region = (navigator.language || '').toLowerCase();
         return region.includes('tw') || region.includes('hk') || region.includes('mo') ? 'zh-Hant' : 'zh-Hans';
     }
-    if (supported.includes(nav[0])) return nav[0];
     return 'en';
 }
 
